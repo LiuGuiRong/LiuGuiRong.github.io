@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-12T00:06:57-07:00</updated>
+  <updated>2013-10-12T01:29:29-07:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Zombie Ninjas Attack: A survivor's retrospective]]></title>
-    <link href="http://LiuGuiRong.github.io/blog/2013/10/11/zombie-ninjas-attack-a-survivors-retrospective/"/>
-    <updated>2013-10-11T23:59:00-07:00</updated>
-    <id>http://LiuGuiRong.github.io/blog/2013/10/11/zombie-ninjas-attack-a-survivors-retrospective</id>
+    <title type="html"><![CDATA[my first blog]]></title>
+    <link href="http://LiuGuiRong.github.io/blog/2013/10/12/my-first-blog/"/>
+    <updated>2013-10-12T01:20:00-07:00</updated>
+    <id>http://LiuGuiRong.github.io/blog/2013/10/12/my-first-blog</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
