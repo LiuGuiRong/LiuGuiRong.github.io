@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://LiuGuiRong.github.io/sitemap.xml 
