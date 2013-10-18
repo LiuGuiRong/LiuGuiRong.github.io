@@ -4,7 +4,7 @@
   <title><![CDATA[OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-18T09:39:35+00:00</updated>
+  <updated>2013-10-18T09:40:37+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -25,7 +25,7 @@
 <h4>目标和对象</h4>
 
 <ol>
-<li><p>目标：在不改变C++底层框架的基础上，程序能做到基于需求的灵活修改。</p></li>
+<li><p>目标：在不改变C++底层框架的基础上，程序能做到满足需求的灵活修改。</p></li>
 <li><p>对象：游戏逻辑层。UI,SKILL,CONTROL,etc&hellip;</p></li>
 </ol>
 
@@ -194,7 +194,7 @@ BehaviorTree = {
 <blockquote><p>Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.</p><footer><strong>see more..</strong> <cite><a href='http://blog.oxrush.com'>Welcome to My Life Blog</a></cite></footer></blockquote>
 
 
-<p><strong> my email: <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#104;&#x72;&#x6f;&#111;&#x6d;&#107;&#101;&#101;&#x70;&#101;&#114;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#104;&#114;&#x6f;&#x6f;&#x6d;&#x6b;&#x65;&#101;&#112;&#101;&#114;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x68;&#x72;&#111;&#x6f;&#x6d;&#107;&#x65;&#x65;&#112;&#x65;&#x72;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x68;&#114;&#x6f;&#111;&#109;&#x6b;&#101;&#x65;&#x70;&#101;&#114;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#x6d;</a> </strong></p>
 ]]></content>
   </entry>
   
