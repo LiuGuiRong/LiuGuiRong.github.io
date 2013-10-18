@@ -9,8 +9,7 @@
   <meta name="author" content="OX RuHSER">
 
   
-  <meta name="description" content="概述 在业务需求多变的情况下，剥离客户端底层系统与应用逻辑，实现逻辑层的热加载热更新，遂增加了游戏客户端脚本,本篇主要是对现有客户端逻辑和底层各自功能的阐述以及对应的剥离这些功能点粒度的探讨的设计案。
-">
+  <meta name="description" content="概述 在业务需求多变的情况下，剥离客户端底层系统与应用逻辑，实现逻辑层的热加载热更新，遂增加了游戏客户端脚本,本篇主要是对现有客户端逻辑和底层各自功能的阐述以及对应的剥离这些功能点粒度的探讨的设计案。 test1 dasdsadsa test2 可见 see 行为树实现 Task = { &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +97,70 @@
   <div class="entry-content"><h3>概述</h3>
 
 <p>在业务需求多变的情况下，剥离客户端底层系统与应用逻辑，实现逻辑层的热加载热更新，遂增加了游戏客户端脚本,本篇主要是对现有客户端逻辑和底层各自功能的阐述以及对应的剥离这些功能点粒度的探讨的设计案。</p>
+
+<h3>test1</h3>
+
+<p>dasdsadsa</p>
+
+<h4>test2</h4>
+
+<p><img src="/images/game-ai-design/fsm.png" alt="FSM" /></p>
+
+<p>可见</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Behavior_tree">see</a></p>
+
+<p><strong>行为树实现</strong></p>
+
+<pre><code>Task = {
+    update = function(args) end,
+    on_enter = function(args) end,
+    on_exit = function(args) end,
+}
+BehaviorNode = {
+    nodes = {},
+    status = 0,
+    task = nil,
+    tick = function(args)
+        return task:update(args)
+    end,
+}
+BehaviorTree = {
+    object = nil,
+    root = nil,
+    tick = function(args)
+        if root then
+            root:tick(args)
+        end
+    end,
+}
+</code></pre>
+
+<p>test 3</p>
+
+<p>&mdash; lua code</p>
+
+<pre><code>local behavior_node = {
+    precondition = function() return true end,
+    action = function()
+        -- do something
+    end,
+}
+</code></pre>
+
+<p>关于行为树更加详细的解释见<a href="http://www.aisharing.com/archives/90">这里</a></p>
+
+<ul>
+<li><p>testtest</p>
+
+<ol>
+<li> dasdsadsa</li>
+</ol>
+</li>
+<li><p>From &ldquo;Three Ways of Cultivating Game AI&rdquo;
+ <img src="/images/game-ai-design/editor1.png" alt="BehaviorEditor1" /></p></li>
+</ul>
+
 </div>
   
   

@@ -4,7 +4,7 @@
   <title><![CDATA[OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-18T01:26:35+00:00</updated>
+  <updated>2013-10-18T01:40:16+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -21,6 +21,70 @@
     <content type="html"><![CDATA[<h3>概述</h3>
 
 <p>在业务需求多变的情况下，剥离客户端底层系统与应用逻辑，实现逻辑层的热加载热更新，遂增加了游戏客户端脚本,本篇主要是对现有客户端逻辑和底层各自功能的阐述以及对应的剥离这些功能点粒度的探讨的设计案。</p>
+
+<h3>test1</h3>
+
+<p>dasdsadsa</p>
+
+<h4>test2</h4>
+
+<p><img src="http://LiuGuiRong.github.io/images/game-ai-design/fsm.png" alt="FSM" /></p>
+
+<p>可见</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Behavior_tree">see</a></p>
+
+<p><strong>行为树实现</strong></p>
+
+<pre><code>Task = {
+    update = function(args) end,
+    on_enter = function(args) end,
+    on_exit = function(args) end,
+}
+BehaviorNode = {
+    nodes = {},
+    status = 0,
+    task = nil,
+    tick = function(args)
+        return task:update(args)
+    end,
+}
+BehaviorTree = {
+    object = nil,
+    root = nil,
+    tick = function(args)
+        if root then
+            root:tick(args)
+        end
+    end,
+}
+</code></pre>
+
+<p>test 3</p>
+
+<p>&mdash; lua code</p>
+
+<pre><code>local behavior_node = {
+    precondition = function() return true end,
+    action = function()
+        -- do something
+    end,
+}
+</code></pre>
+
+<p>关于行为树更加详细的解释见<a href="http://www.aisharing.com/archives/90">这里</a></p>
+
+<ul>
+<li><p>testtest</p>
+
+<ol>
+<li> dasdsadsa</li>
+</ol>
+</li>
+<li><p>From &ldquo;Three Ways of Cultivating Game AI&rdquo;
+ <img src="http://LiuGuiRong.github.io/images/game-ai-design/editor1.png" alt="BehaviorEditor1" /></p></li>
+</ul>
+
 ]]></content>
   </entry>
   
