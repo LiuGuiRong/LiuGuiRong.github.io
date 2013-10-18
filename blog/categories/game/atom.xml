@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Game | OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-18T06:14:12+00:00</updated>
+  <updated>2013-10-18T06:18:21+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -18,7 +18,9 @@
     <link href="http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui/"/>
     <updated>2013-10-18T10:00:00+00:00</updated>
     <id>http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui</id>
-    <content type="html"><![CDATA[<h1>概述</h1>
+    <content type="html"><![CDATA[<hr />
+
+<h1>概述</h1>
 
 <p>客户端脚本框架设计文档。</p>
 
@@ -34,9 +36,9 @@
 
 <p>理想化的客户端框架应该是支持一切客户端应用逻辑的热更新与热加载，但是在实际项目中，由于历史的原因和项目代码增加带来的修改的复杂度增加，所以维持一个较好的逻辑层剥离粒度是本文其中的一个重点设计范畴。</p>
 
-<h1>设计</h1>
-
 <hr />
+
+<p><em>#设计</em></p>
 
 <hr />
 
@@ -46,11 +48,15 @@
 
 <p><strong>2. UI逻辑框架待完善</strong></p>
 
+<hr />
+
 <h1>关于测试</h1>
 
 <h2>测试类别</h2>
 
 <h2>期待反馈</h2>
+
+<hr />
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>客户端脚本引擎模块 start:3 mark:3,4-5 <a href="http://192.168.1.101/README.txt">http://192.168.1.101/README.txt</a> link source code </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -175,7 +181,7 @@ BehaviorTree = {
 
 <p><blockquote><p></p></p><p><pre><code>    Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.<br/></code></pre></p><p><p></p><footer><strong>see more..  <a href="http://blog.oxrush.com">http://blog.oxrush.com</a>  Welcome to my life blog</strong></footer></blockquote></p>
 
-<p><strong> my email: <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x68;&#x72;&#x6f;&#111;&#x6d;&#107;&#101;&#x65;&#112;&#101;&#114;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#x68;&#114;&#111;&#x6f;&#109;&#107;&#101;&#101;&#x70;&#101;&#x72;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a> </strong></p>
+<p><strong> my email: <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x68;&#x72;&#x6f;&#x6f;&#109;&#107;&#101;&#x65;&#112;&#x65;&#x72;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#104;&#114;&#x6f;&#x6f;&#109;&#x6b;&#101;&#x65;&#x70;&#x65;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a> </strong></p>
 ]]></content>
   </entry>
   
