@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[OXRusher's Blog With Octopress]]></title>
-  <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Game | OXRusher's Blog With Octopress]]></title>
+  <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
   <updated>2013-10-18T02:15:33+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
@@ -18,9 +18,7 @@
     <link href="http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui/"/>
     <updated>2013-10-18T10:00:00+00:00</updated>
     <id>http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui</id>
-    <content type="html"><![CDATA[<p><span class='pullquote-right' data-pullquote='需求'>
-dsaddddddddddddddddddddddddddddddddddddddddddddddl, 需求 and that&rsquo;s all there is to it.
-</span></p>
+    <content type="html"><![CDATA[<p>Surround your pullquote like this {" text to be quoted "}</p>
 
 <h3>概述</h3>
 
@@ -32,7 +30,7 @@ dsaddddddddddddddddddddddddddddddddddddddddddddddl, 需求 and that&rsquo;s all 
 
 <h4>test2</h4>
 
-<p><img src="http://LiuGuiRong.github.io/images/game-ai-design/fsm.png" alt="FSM" /></p>
+<p><img src="/images/game-ai-design/fsm.png" alt="FSM" /></p>
 
 <p>可见</p>
 
@@ -89,21 +87,20 @@ BehaviorTree = {
 </ol>
 </li>
 <li><p>From &ldquo;Three Ways of Cultivating Game AI&rdquo;
- <img src="http://LiuGuiRong.github.io/images/game-ai-design/editor1.png" alt="BehaviorEditor1" /></p></li>
+ <img src="/images/game-ai-design/editor1.png" alt="BehaviorEditor1" /></p></li>
 </ul>
 
 
-<p><video width='640' height='320' preload='none' controls poster='http://s3.imathis.com/video/zero-to-fancy-buttons.png'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video></p>
+<p><video width='640' height='320' preload='none' controls poster=''><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4">http://s3.imathis.com/video/zero-to-fancy-buttons.mp4</a>' ></video></p>
 
-<p><img src="http://placekitten.com/890/280">
-<img class="left" src="http://placekitten.com/320/250" title="Place Kitten #2" >
-<img class="right" src="http://placekitten.com/300/500" width="150" height="250" title="Place Kitten #3" >
-<img class="right" src="http://placekitten.com/300/500" width="150" height="250" title="Place Kitten #4" alt="An image of a very cute kitten"></p>
+<p><img class="<a" src="href="http://placekitten.com/890/280">http://placekitten.com/890/280</a>">
+<img class="left <a" src="href="http://placekitten.com/320/250">http://placekitten.com/320/250</a>" title="Place Kitten #2" >
+<img class="right <a" src="href="http://placekitten.com/300/500">http://placekitten.com/300/500</a>" width="150" height="250" title="Place Kitten #3" >
+<img class="right <a" src="href="http://placekitten.com/300/500">http://placekitten.com/300/500</a>" width="150" height="250" title="&lsquo;Place Kitten #4&rsquo; &lsquo;An image of a very cute kitten&rsquo;" ></p>
 
-<p><img class="left" src="http://LiuGuiRong.github.io/images/game-ai-design/fsm.png"></p>
+<p><img class="left" src="/images/game-ai-design/fsm.png"></p>
 
-<blockquote><p>Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.</p><footer><strong>see more..</strong> <cite><a href='http://blog.oxrush.com'>Welcome to My Life Blog</a></cite></footer></blockquote>
-
+<p><blockquote><p></p></p><p><pre><code>    Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.<br/></code></pre></p><p><p></p><footer><strong>see more..  <a href="http://blog.oxrush.com">http://blog.oxrush.com</a>  Welcome to my life blog</strong></footer></blockquote></p>
 ]]></content>
   </entry>
   
