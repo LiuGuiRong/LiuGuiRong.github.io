@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Game | OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-18T06:02:32+00:00</updated>
+  <updated>2013-10-18T06:14:12+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -34,83 +34,23 @@
 
 <p>理想化的客户端框架应该是支持一切客户端应用逻辑的热更新与热加载，但是在实际项目中，由于历史的原因和项目代码增加带来的修改的复杂度增加，所以维持一个较好的逻辑层剥离粒度是本文其中的一个重点设计范畴。</p>
 
-<h1>数据设计</h1>
-
-<h2>数据结构$程序结构</h2>
-
-<h3>程序结构图</h3>
+<h1>设计</h1>
 
 <hr />
 
-<p>111         333 22</p>
-
 <hr />
 
-<h2>dsadasdsadsadsa     33  1</h2>
+<h1>约束、限制和系统参数</h1>
 
-<p>  3.1.1   结构图 <br/>
-  图形化描述结构。 <br/>
-  3.1.2   选择性 <br/>
-  讨论其它可供考虑的结构。选定3.1.1中结构类型的原因。 <br/>
-  3.2   构件描述 <br/>
-  详细描述结构中的每个软件构件。 <br/>
-  3.2.1   构件过程叙述(PSPEC) <br/>
-  描述构件的过程。 <br/>
-  3.2.2   构件接口描述 <br/>
-  详细描述构件的输入和输出。 <br/>
-  3.2.3   构件执行细节 <br/>
-  每个构件的详细演算描述。 <br/>
-  3.2.3.1   接口描述 <br/>
-  3.2.3.2   演算模型(e.g.,   PDL) <br/>
-  3.2.3.3   规范/限制 <br/>
-  ]3.2.3.4   本地数据结构 <br/>
-  3.2.3.5   在3.2.3.6设计中包含的执行结果 <br/>
-  3.3   软件接口描述 <br/>
-  软件对外界的接口描述 <br/>
-  3.3.1机器对外接口 <br/>
-  与其他机器或者设备的接口描述。 <br/>
-  3.3.2系统对外接口 <br/>
-  对其它系统、产品和网络的接口描述。 <br/>
-  3.3.3与人的接口 <br/>
-  概述软件与任何人的界面。 <br/>
-  4.0   用户界面设计 <br/>
-  描述软件的用户界面设计。 <br/>
-  4.1   描述用户界面 <br/>
-  详细描述用户界面，包括屏幕显示图标、图片或者类型。 <br/>
-  4.1.1   屏幕图片 <br/>
-  从用户角度描述界面。 <br/>
-  4.1.2   对象和操作 <br/>
-  所有屏幕对象和操作的定义。 <br/>
-  4.2   界面设计规范 <br/>
-  用户界面的设计和实现的规范和标准。 <br/>
-  4.3   可见构件 <br/>
-  实现的GUI可见构件说明。 <br/>
-  4.4   UIDS描述 <br/>
-  用户界面开发系统描述。 <br/>
-  5.0约束、限制和系统参数 <br/>
-  会影响软件的规格说明、设计和实现的特殊事件。 <br/>
-  6.0测试标准 <br/>
-  测试策略和预备测试用例描述。</p>
+<p><strong>1. 技能逻辑框架已经搭建并测试完成，后续需要结合需求验证框架稳定/健壮性</strong></p>
 
-<pre><code>6.1   测试的类别   
-</code></pre>
+<p><strong>2. UI逻辑框架待完善</strong></p>
 
-<p>  规定实施测试的类别，包括尽量详细的描述。这里是针对黑盒测试现象的描述。 <br/>
-  6.2期待软件反馈 <br/>
-  测试期待的结果描述。 <br/>
-  6.3执行界线 <br/>
-  特殊执行需要的说明。 <br/>
-  6.4   重要构件确认 <br/>
-  决定性构件或者需要特殊注意的构件的测试确认。 <br/>
-  7.0附录 <br/>
-  设计说明的补充信息。 <br/>
-  7.1系统可跟踪矩阵 <br/>
-  一个定期回归系统规格跟踪软件需求的矩阵。 <br/>
-  7.2   产品战略 <br/>
-  如果规格说明书是为一个产品设计的，描述相关的产品战略。 <br/>
-  7.3   使用分析算法 <br/>
-  描述所有分析活动所使用到的分析算法。 <br/>
-  7.4   补充信息   (如果有需要特别说明的)</p>
+<h1>关于测试</h1>
+
+<h2>测试类别</h2>
+
+<h2>期待反馈</h2>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>客户端脚本引擎模块 start:3 mark:3,4-5 <a href="http://192.168.1.101/README.txt">http://192.168.1.101/README.txt</a> link source code </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -235,7 +175,7 @@ BehaviorTree = {
 
 <p><blockquote><p></p></p><p><pre><code>    Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.<br/></code></pre></p><p><p></p><footer><strong>see more..  <a href="http://blog.oxrush.com">http://blog.oxrush.com</a>  Welcome to my life blog</strong></footer></blockquote></p>
 
-<p><strong> my email: <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x68;&#114;&#x6f;&#x6f;&#109;&#107;&#101;&#x65;&#112;&#x65;&#x72;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#104;&#x72;&#x6f;&#111;&#x6d;&#x6b;&#101;&#x65;&#112;&#x65;&#x72;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x68;&#x72;&#x6f;&#111;&#x6d;&#107;&#101;&#x65;&#112;&#101;&#114;&#64;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;">&#x68;&#114;&#111;&#x6f;&#109;&#107;&#101;&#101;&#x70;&#101;&#x72;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;</a> </strong></p>
 ]]></content>
   </entry>
   
