@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Game | OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-18T03:22:06+00:00</updated>
+  <updated>2013-10-18T03:29:34+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -37,6 +37,23 @@
 </span><span class='line'><span class="kd">local</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
 </span><span class='line'><span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>```
+* this is all</p>
+
+<pre><code>* all
+</code></pre>
+
+<ul>
+<li>buble
+```</li>
+</ul>
+
+
+<p><code>
+1. tooo
+2. dasda
+</code></p>
 
 <h1>Thisis all</h1>
 
