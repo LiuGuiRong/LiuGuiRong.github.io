@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Game | OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-18T03:59:31+00:00</updated>
+  <updated>2013-10-18T05:51:40+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -20,41 +20,38 @@
     <id>http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui</id>
     <content type="html"><![CDATA[<h1>概述</h1>
 
-<p>  这部分提供对整个设计文档的概述。描述了所有数据，结构，接口和软件构件级别的设计。</p>
+<p>客户端脚本框架设计文档。</p>
 
 <h2>目标和对象</h2>
 
-<p>  描述软件对象的所有目标。</p>
+<ol>
+<li><p>目标：在不改变C++底层框架的基础上，程序能做到基于需求的灵活修改。</p></li>
+<li><p>对象：游戏逻辑层。</p></li>
+</ol>
 
-<h1>陈述范围</h1>
 
-<p>  软件描述。主要输入，过程功能，输出的描述，不考虑详细细节。</p>
+<h2>范围</h2>
 
-<h2>软件内容</h2>
-
-<p>  软件被置于商业或者产品线中，讨论相关的战略问题。目的是让读者能够对“宏图”有所了解。</p>
-
-<h2>主要系统参数</h2>
-
-<p>  任何商务软件或者产品线都包含软件规定、设计、实现和测试的说明和规范。</p>
+<pre><code>理想化的客户端框架应该是支持一切客户端应用逻辑的热更新与热加载，但是在实际项目中，由于历史的原因和项目代码增加带来的修改的复杂度增加，所以维持一个较好的逻辑层剥离粒度是本文其中的一个重点设计范畴。
+</code></pre>
 
 <h1>数据设计</h1>
 
-<p>  描述所有数据结构包括内部变量，全局变量和临时数据结构。</p>
-
 <h2>内部软件数据结构</h2>
 
-<p>  描述软件内部的构件之间的数据传输的结构。 <br/>
-  2.2   全局数据结构 <br/>
-  描述主要部分的数据结构。 <br/>
-  2.3   临时数据结构 <br/>
-  为临时应用而生成的文件的描述。 <br/>
-  2.4   数据库描述 <br/>
-  作为应用程序的一部分，描述数据库结构。 <br/>
-  3.0   结构化和构件级别设计 <br/>
-  描述程序结构。 <br/>
-  3.1   程序结构 <br/>
-  详细描述应用程序所选定的程序结构。 <br/>
+<p>  描述软件内部的构件之间的数据传输的结构。</p>
+
+<h2>全局数据结构</h2>
+
+<p>  描述主要部分的数据结构。</p>
+
+<h2>临时数据结构</h2>
+
+<p>  为临时应用而生成的文件的描述。</p>
+
+<h1>程序结构</h1>
+
+<p>  详细描述应用程序所选定的程序结构。 <br/>
   3.1.1   结构图 <br/>
   图形化描述结构。 <br/>
   3.1.2   选择性 <br/>
@@ -242,7 +239,7 @@ BehaviorTree = {
 
 <p><blockquote><p></p></p><p><pre><code>    Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.<br/></code></pre></p><p><p></p><footer><strong>see more..  <a href="http://blog.oxrush.com">http://blog.oxrush.com</a>  Welcome to my life blog</strong></footer></blockquote></p>
 
-<p><strong> my email: <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x68;&#x72;&#x6f;&#x6f;&#109;&#107;&#x65;&#101;&#112;&#x65;&#114;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#104;&#114;&#x6f;&#111;&#109;&#107;&#x65;&#101;&#x70;&#101;&#x72;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x68;&#114;&#x6f;&#x6f;&#x6d;&#107;&#x65;&#x65;&#x70;&#101;&#114;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x68;&#x72;&#111;&#x6f;&#109;&#107;&#101;&#101;&#x70;&#x65;&#114;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a> </strong></p>
 ]]></content>
   </entry>
   
