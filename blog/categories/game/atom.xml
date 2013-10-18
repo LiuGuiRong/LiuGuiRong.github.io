@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Game | OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-18T02:52:35+00:00</updated>
+  <updated>2013-10-18T02:56:49+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -18,7 +18,13 @@
     <link href="http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui/"/>
     <updated>2013-10-18T10:00:00+00:00</updated>
     <id>http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui</id>
-    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>客户端脚本引擎模块 start:3 mark:3,4-5 <a href="http://192.168.1.101/README.txt">http://192.168.1.101/README.txt</a> link source code </span></figcaption>
+    <content type="html"><![CDATA[<p><code>lua  客户端脚本引擎模块 start:3 mark:3,4-5 http://192.168.1.101/README.txt link source code %}
+local x = 1
+local p = 2
+print()
+</code></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>客户端脚本引擎模块 start:3 mark:3,4-5 <a href="http://192.168.1.101/README.txt">http://192.168.1.101/README.txt</a> link source code </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
