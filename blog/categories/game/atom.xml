@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Game | OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-20T15:30:39+00:00</updated>
+  <updated>2013-10-20T15:31:40+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -204,7 +204,7 @@ Class MiniMap;</p>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>**C++方面，去除了所有的实例类以及弱化了c++界面管理机制，改由lua中去管理，并且增加了lua的函数调用功能。</p>
+<p><strong>C++方面，去除了所有的实例类以及弱化了c++界面管理机制，改由lua中去管理，并且增加了lua的函数调用功能。</strong></p>
 
 <ol>
 <li>srcipt layer</li>
@@ -432,7 +432,7 @@ void MsgAddStr();
 
 <h4>期待反馈</h4>
 
-<p><strong> my email: <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x68;&#114;&#x6f;&#111;&#x6d;&#107;&#101;&#101;&#x70;&#x65;&#114;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#x68;&#x72;&#111;&#x6f;&#x6d;&#x6b;&#x65;&#x65;&#x70;&#101;&#114;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#104;&#114;&#x6f;&#111;&#x6d;&#107;&#101;&#x65;&#112;&#x65;&#114;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x68;&#x72;&#x6f;&#x6f;&#109;&#107;&#x65;&#x65;&#112;&#x65;&#114;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a> </strong></p>
 ]]></content>
   </entry>
   
