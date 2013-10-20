@@ -278,28 +278,46 @@
 <span class='line-number'>22</span>
 <span class='line-number'>23</span>
 <span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
 </pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="nb">module</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">widget&#39;</span><span class="p">,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeeall</span><span class="p">)</span>
 </span><span class='line'>
 </span><span class='line'><span class="nb">require</span> <span class="s1">&#39;</span><span class="s">class&#39;</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">widget</span> <span class="o">=</span> <span class="n">class</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">//</span><span class="err">创建窗口实例</span>
+</span><span class='line'><span class="c1">--创建窗口实例</span>
 </span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">create</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">ui_name</span><span class="p">)</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="kd">local</span> <span class="n">inst</span> <span class="o">=</span> <span class="n">create</span><span class="p">()</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="o">//</span><span class="n">add</span> <span class="n">to</span> <span class="n">listlist</span>
+</span><span class='line'>  <span class="c1">--dd to listlist</span>
 </span><span class='line'>  <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">add</span><span class="p">()</span>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">//</span><span class="err">逻辑帧</span>
+</span><span class='line'><span class="c1">--逻辑帧</span>
 </span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">on_logic_update</span><span class="p">()</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">//</span><span class="err">渲染帧</span>
+</span><span class='line'><span class="c1">--渲染帧</span>
 </span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">on_render_update</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">--隐藏</span>
+</span><span class='line'><span class="n">wdget</span><span class="p">.</span><span class="n">hide</span><span class="p">()</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
@@ -351,16 +369,16 @@
 </span><span class='line'>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">//</span><span class="err">创建窗口实例</span>
+</span><span class='line'><span class="c1">--创建窗口实例</span>
 </span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">create</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">ui_name</span><span class="p">)</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="kd">local</span> <span class="n">inst</span> <span class="o">=</span> <span class="n">create</span><span class="p">()</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="o">//</span><span class="n">add</span> <span class="n">to</span> <span class="n">listlist</span>
+</span><span class='line'>  <span class="c1">--add to listlist</span>
 </span><span class='line'>  <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">add</span><span class="p">()</span>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">//</span><span class="err">事件回调</span>
+</span><span class='line'><span class="c1">--事件回调</span>
 </span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">onevt</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">evt_type</span><span class="p">,</span><span class="n">args</span><span class="p">)</span>
 </span><span class='line'>
 </span><span class='line'><span class="k">end</span>
@@ -371,11 +389,38 @@
 
 <h5>玩家数据</h5>
 
-<h5>代码结构</h5>
+<p>考虑到c++层对玩家数据的依赖，考虑使用老的数据方式，即paramtable管理方式。最后具体使用方式，还是技术会议再讨论。</p>
 
 <h5>事件机制</h5>
 
+<p>由于客户端c++需提供全面良好的时间机制供逻辑层使用，才能完全满足UI脚本层的功能使用。</p>
+
+<p>基于现有的客户端事件机制，增加UI事件以及AS事件类型。</p>
+
+<ol>
+<li>UI事件：</li>
+</ol>
+
+
+<p>从开启客户端，到玩家进入游戏场景之间的各个阶段，都需要使用UI事件机制，如玩家创建角色，进入场景等，脚本层会对相应的UI逻辑做处理.</p>
+
+<ol>
+<li>AS事件：</li>
+</ol>
+
+
+<p>c++需要做的只是做一个lua注册AS事件的函数绑定，以及AS事件的统一回调，做一个适配层。</p>
+
 <h5>函数扩展</h5>
+
+<h2>tolua++ binder:</h2>
+
+<pre><code>void ASInvolk();
+
+void ConnectAS();
+</code></pre>
+
+<hr />
 
 <h3>约束、限制和系统参数</h3>
 
@@ -385,141 +430,18 @@
 
 <h3>关于测试</h3>
 
+<p>通过创建界面实例，由程序发起进行测试。</p>
+
 <h4>测试类别</h4>
 
+<p><strong>whitebox</strong></p>
+
 <h4>期待反馈</h4>
-
-<figure class='code'><figcaption><span>客户端脚本引擎模块 start:3 mark:3,4-5</span><a href='http://192.168.1.101/README.txt'>source link </a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span class='line'><span class="nb">print</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span> (test.lua)</span> <a href='/downloads/code/test.lua'>download</a></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span class='line'><span class="kd">local</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
-</span><span class='line'><span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="o">*</span> <span class="k">this</span> <span class="n">is</span> <span class="n">all</span>
-</span><span class='line'>  <span class="o">*</span> <span class="n">all</span>
-</span><span class='line'><span class="o">*</span> <span class="n">buble</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="mf">1.</span> <span class="n">tooo</span>
-</span><span class='line'><span class="mf">2.</span> <span class="n">dasda</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>Thisis all</h1>
-
-<h2>thisi snon all</h2>
-
-<h3>概述</h3>
-
-<p>在业务需求多变的情况下，剥离客户端底层系统与应用逻辑，实现逻辑层的热加载热更新，遂增加了游戏客户端脚本,本篇主要是对现有客户端逻辑和底层各自功能的阐述以及对应的剥离这些功能点粒度的探讨的设计案。</p>
-
-<h3>test1</h3>
-
-<p>dasdsadsa</p>
-
-<h4>test2</h4>
-
-<p><img src="/images/game-ai-design/fsm.png" alt="FSM" /></p>
-
-<p>可见</p>
-
-<!--more-->
-
-
-<p><img src="http://en.wikipedia.org/wiki/Behavior_tree" alt="see" /></p>
-
-<p><strong>行为树实现</strong></p>
-
-<pre><code>Task = {
-    update = function(args) end,
-    on_enter = function(args) end,
-    on_exit = function(args) end,
-}
-BehaviorNode = {
-    nodes = {},
-    status = 0,
-    task = nil,
-    tick = function(args)
-        return task:update(args)
-    end,
-}
-BehaviorTree = {
-    object = nil,
-    root = nil,
-    tick = function(args)
-        if root then
-            root:tick(args)
-        end
-    end,
-}
-</code></pre>
-
-<p>test 3</p>
-
-<p>&mdash; lua code</p>
-
-<pre><code>local behavior_node = {
-    precondition = function() return true end,
-    action = function()
-        -- do something
-    end,
-}
-</code></pre>
-
-<p>关于行为树更加详细的解释见<a href="http://www.aisharing.com/archives/90">这里</a></p>
-
-<ul>
-<li><p>testtest</p>
-
-<ol>
-<li> dasdsadsa</li>
-</ol>
-</li>
-<li><p>From &ldquo;Three Ways of Cultivating Game AI&rdquo;
- <img src="/images/game-ai-design/editor1.png" alt="BehaviorEditor1" /></p></li>
-</ul>
-
-
-<p><video width='640' height='320' preload='none' controls poster='http://s3.imathis.com/video/zero-to-fancy-buttons.png'><source src='http://s3.imathis.com/video/zero-to-fancy-buttons.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video></p>
-
-<p><img src="http://placekitten.com/890/280">
-<img class="left" src="http://placekitten.com/320/250" title="Place Kitten #2" >
-<img class="right" src="http://placekitten.com/300/500" width="150" height="250" title="Place Kitten #3" >
-<img class="right" src="http://placekitten.com/300/500" width="150" height="250" title="Place Kitten #4" alt="An image of a very cute kitten"></p>
-
-<p><img class="left" src="/images/game-ai-design/fsm.png"></p>
 
 <blockquote><p>Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.</p><footer><strong>see more..</strong> <cite><a href='http://blog.oxrush.com'>Welcome to My Life Blog</a></cite></footer></blockquote>
 
 
-<p><strong> my email: <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x68;&#114;&#x6f;&#x6f;&#x6d;&#x6b;&#x65;&#x65;&#112;&#101;&#x72;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#104;&#114;&#111;&#111;&#109;&#x6b;&#x65;&#101;&#112;&#101;&#x72;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> </strong></p>
+<p><strong> my email: <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x68;&#x72;&#x6f;&#111;&#x6d;&#107;&#x65;&#101;&#x70;&#x65;&#114;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x68;&#x72;&#x6f;&#111;&#109;&#x6b;&#x65;&#101;&#x70;&#x65;&#x72;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;</a> </strong></p>
 </div>
 
 
