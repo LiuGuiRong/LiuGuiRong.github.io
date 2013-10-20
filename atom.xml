@@ -4,7 +4,7 @@
   <title><![CDATA[OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-20T11:04:32+00:00</updated>
+  <updated>2013-10-20T11:12:34+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -98,9 +98,20 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>现有客户端UI的功能主要是以客户端C++功能代码和零星的几个脚本配置文件组织而成。</p>
 
-<p>这里列举了几个主要UI相关的C++类，以及lua辅助配置文件：</p>
+
+<figure class='code'><figcaption><span>class.lua start:1 mark:1</span><a href='http://doc.oxrush.com/design/ClientScriptDesign/passscript/ui/class.lua'>source link </a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">function</span> <span class="nf">InitClassInfo</span><span class="p">()</span>
+</span><span class='line'>  <span class="n">SetClassInfo</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Õ½&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">zhanA&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">TargetZhan&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Rage&quot;</span><span class="p">);</span>
+</span><span class='line'>  <span class="o">...</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>现有的lua文件包含c++事件调用接口和简单配置。</em></p>
 
 <h5>玩家数据</h5>
 
@@ -252,7 +263,7 @@ BehaviorTree = {
 <blockquote><p>Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.</p><footer><strong>see more..</strong> <cite><a href='http://blog.oxrush.com'>Welcome to My Life Blog</a></cite></footer></blockquote>
 
 
-<p><strong> my email: <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x68;&#x72;&#x6f;&#x6f;&#x6d;&#107;&#x65;&#x65;&#112;&#x65;&#114;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#104;&#114;&#x6f;&#111;&#x6d;&#107;&#101;&#x65;&#x70;&#101;&#x72;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x68;&#114;&#111;&#111;&#109;&#x6b;&#101;&#x65;&#112;&#x65;&#114;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#104;&#x72;&#111;&#111;&#x6d;&#107;&#x65;&#x65;&#x70;&#101;&#x72;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a> </strong></p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Game | OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-20T11:04:32+00:00</updated>
+  <updated>2013-10-20T11:12:34+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -112,9 +112,32 @@ Class MiniMap;</p>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>现有客户端UI的功能主要是以客户端C++功能代码和零星的几个脚本配置文件组织而成。</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>class.lua start:1 mark:1 <a href="http://doc.oxrush.com/design/ClientScriptDesign/passscript/ui/class.lua">http://doc.oxrush.com/design/ClientScriptDesign/passscript/ui/class.lua</a> source link </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">function</span> <span class="nf">InitClassInfo</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">SetClassInfo</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Õ½&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">zhanA&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">TargetZhan&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Rage&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="o">...</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>这里列举了几个主要UI相关的C++类，以及lua辅助配置文件：</p>
+<p><em>现有的lua文件包含c++事件调用接口和简单配置。</em></p>
 
 <h5>玩家数据</h5>
 
@@ -259,7 +282,7 @@ BehaviorTree = {
 
 <p><blockquote><p></p></p><p><pre><code>    Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.<br/></code></pre></p><p><p></p><footer><strong>see more..  <a href="http://blog.oxrush.com">http://blog.oxrush.com</a>  Welcome to my life blog</strong></footer></blockquote></p>
 
-<p><strong> my email: <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#104;&#x72;&#111;&#111;&#x6d;&#x6b;&#x65;&#x65;&#x70;&#x65;&#x72;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#x6d;">&#x68;&#x72;&#x6f;&#111;&#109;&#107;&#x65;&#x65;&#x70;&#101;&#x72;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#104;&#114;&#111;&#x6f;&#x6d;&#107;&#x65;&#x65;&#112;&#x65;&#114;&#64;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#104;&#114;&#x6f;&#111;&#109;&#107;&#101;&#x65;&#x70;&#x65;&#x72;&#64;&#x67;&#109;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#109;</a> </strong></p>
 ]]></content>
   </entry>
   
