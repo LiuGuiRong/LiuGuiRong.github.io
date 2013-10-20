@@ -137,7 +137,7 @@
 <h6>现有UI结构</h6>
 
 <ol>
-<li>cpp</li>
+<li>cpp layer</li>
 </ol>
 
 
@@ -160,10 +160,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
-<li>lua</li>
-</ol>
-
+<p>2.script layer</p>
 
 <figure class='code'><figcaption><span>ui.lua start:1 mark:1,6</span><a href='http://doc.oxrush.com/design/ClientScriptDesign/passscript/ui/ui.lua'>source link </a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -206,11 +203,124 @@
 <h6>新的结构</h6>
 
 <ol>
-<li>cpp</li>
+<li>cpp layer</li>
 </ol>
 
 
-<figure class='code'><figcaption><span>UIManager.cpp start:1 mark:1 </span></figcaption>
+<figure class='code'><figcaption><span>UIAdapter.cpp start:1 mark:1 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="c1">//游戏界面管理类</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">UIAdapter</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">public</span><span class="o">:</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="c1">//AS统一调用入口</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">bool</span> <span class="n">OnAsEvt</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//c++事件统一回调入口</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">bool</span> <span class="n">OnGameEvt</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//逻辑帧驱动</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">void</span> <span class="n">OnLogicUpdate</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//渲染帧驱动</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">void</span> <span class="n">OnRenderUpdate</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//脚本函数CALL</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">bool</span> <span class="n">CallLua</span><span class="p">(</span><span class="n">luaobj</span><span class="p">,</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">private</span><span class="o">:</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>**C++方面，去除了所有的实例类以及弱化了c++界面管理机制，改由lua中去管理，并且增加了lua的函数调用功能。</p>
+
+<ol>
+<li>srcipt layer</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>widget.cpp start:1 mark:1 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="nb">module</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">widget&#39;</span><span class="p">,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeeall</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;</span><span class="s">class&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">widget</span> <span class="o">=</span> <span class="n">class</span><span class="p">.</span><span class="n">new</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">//</span><span class="err">创建窗口实例</span>
+</span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">create</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">ui_name</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">local</span> <span class="n">inst</span> <span class="o">=</span> <span class="n">create</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">//</span><span class="n">add</span> <span class="n">to</span> <span class="n">listlist</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">add</span><span class="p">()</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">//</span><span class="err">逻辑帧</span>
+</span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">on_logic_update</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">//</span><span class="err">渲染帧</span>
+</span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">on_render_update</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>uimgr.cpp start:1 mark:1 </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -237,39 +347,40 @@
 <span class='line-number'>24</span>
 <span class='line-number'>25</span>
 <span class='line-number'>26</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="c1">//游戏界面管理类</span>
-</span><span class='line'><span class="k">class</span> <span class="nc">UIEngin</span>
-</span><span class='line'><span class="p">{</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="nb">module</span><span class="p">(</span><span class="s1">&#39;</span><span class="s">uimgr&#39;</span><span class="p">,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeeall</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'><span class="k">public</span><span class="o">:</span>
+</span><span class='line'><span class="c1">--逻辑层UI列表</span>
+</span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">ui_list</span> <span class="o">=</span> <span class="n">uimgr</span><span class="p">.</span><span class="n">ui_list</span> <span class="ow">or</span> <span class="p">{}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">--程式每帧</span>
+</span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">onupdate</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+</span><span class='line'>  <span class="c1">--if render...</span>
+</span><span class='line'>  <span class="n">self</span><span class="p">.</span><span class="n">update_render</span><span class="p">()</span>
 </span><span class='line'>  
-</span><span class='line'>  <span class="c1">//AS统一调用入口</span>
-</span><span class='line'>  <span class="n">Static</span> <span class="kt">bool</span> <span class="n">OnAsEvt</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>  <span class="c1">--if logic...</span>
+</span><span class='line'>  <span class="n">self</span><span class="p">.</span><span class="n">update_logic</span><span class="p">()</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="c1">//c++事件统一回调入口</span>
-</span><span class='line'>  <span class="n">Static</span> <span class="kt">bool</span> <span class="n">OnGameEvt</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="c1">//逻辑帧驱动</span>
-</span><span class='line'>  <span class="n">Static</span> <span class="kt">void</span> <span class="n">OnLogicUpdate</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'><span class="o">//</span><span class="err">创建窗口实例</span>
+</span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">create</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">ui_name</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="c1">//渲染帧驱动</span>
-</span><span class='line'>  <span class="n">Static</span> <span class="kt">void</span> <span class="n">OnRenderUpdate</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">local</span> <span class="n">inst</span> <span class="o">=</span> <span class="n">create</span><span class="p">()</span>
 </span><span class='line'>
+</span><span class='line'>  <span class="o">//</span><span class="n">add</span> <span class="n">to</span> <span class="n">listlist</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">add</span><span class="p">()</span>
+</span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  <span class="c1">//脚本函数CALL</span>
-</span><span class='line'>  <span class="n">Static</span> <span class="kt">bool</span> <span class="n">CallLua</span><span class="p">(</span><span class="n">luaobj</span><span class="p">,</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'><span class="o">//</span><span class="err">事件回调</span>
+</span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">onevt</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">evt_type</span><span class="p">,</span><span class="n">args</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="k">private</span><span class="o">:</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
-<li>lua</li>
-</ol>
-
+<p>**新的脚本框架，是以老的c++UI管理类的管理方式为基础的扩展。</p>
 
 <h5>玩家数据</h5>
 
