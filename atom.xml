@@ -4,7 +4,7 @@
   <title><![CDATA[OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-20T11:15:07+00:00</updated>
+  <updated>2013-10-20T11:33:46+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -42,7 +42,9 @@
 
 <h4>UI</h4>
 
-<h5>现有UI构成</h5>
+<h5>代码结构</h5>
+
+<h6>现有UI结构</h6>
 
 <ol>
 <li>cpp</li>
@@ -111,7 +113,73 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><em>现有的lua文件包含c++事件调用接口和简单配置。</em></p>
+<h6>新的结构</h6>
+
+<ol>
+<li>cpp</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>UIManager.cpp start:1 mark:1 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="c1">//游戏界面管理类</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">UIEngin</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">public</span><span class="o">:</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="c1">//AS统一调用入口</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">bool</span> <span class="n">OnAsEvt</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//c++事件统一回调入口</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">bool</span> <span class="n">OnGameEvt</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//逻辑帧驱动</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">void</span> <span class="n">OnLogicUpdate</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//渲染帧驱动</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">void</span> <span class="n">OnRenderUpdate</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//脚本函数CALL</span>
+</span><span class='line'>  <span class="n">Static</span> <span class="kt">bool</span> <span class="n">CallLua</span><span class="p">(</span><span class="n">luaobj</span><span class="p">,</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">private</span><span class="o">:</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>lua</li>
+</ol>
+
 
 <h5>玩家数据</h5>
 
@@ -263,7 +331,7 @@ BehaviorTree = {
 <blockquote><p>Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.</p><footer><strong>see more..</strong> <cite><a href='http://blog.oxrush.com'>Welcome to My Life Blog</a></cite></footer></blockquote>
 
 
-<p><strong> my email: <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x68;&#x72;&#111;&#111;&#x6d;&#107;&#x65;&#x65;&#x70;&#101;&#114;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x68;&#x72;&#111;&#111;&#109;&#107;&#x65;&#101;&#112;&#101;&#114;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#104;&#114;&#111;&#x6f;&#109;&#107;&#101;&#x65;&#x70;&#101;&#x72;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#x68;&#114;&#x6f;&#x6f;&#109;&#x6b;&#101;&#101;&#x70;&#x65;&#114;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a> </strong></p>
 ]]></content>
   </entry>
   
