@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Game | OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-20T10:13:53+00:00</updated>
+  <updated>2013-10-20T10:22:52+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -41,6 +41,41 @@
 <p><strong>已完成,详见<a href="http://doc.oxrush.com/design/ClientScriptDesign/ClientDesign.html">link</a></strong></p>
 
 <h4>UI</h4>
+
+<h5>现有UI构成</h5>
+
+<ol>
+<li>cpp</li>
+</ol>
+
+
+<p>```cpp</p>
+
+<p>//widget管理类，负责windows消息，AS消息，以及逻辑帧驱动统一调用。
+Class UIManager;</p>
+
+<p>//窗口基类。所有UI都从该类派生。
+Class widget;</p>
+
+<p>//窗口实例类，对应客户端小地图功能。
+Class MiniMap;</p>
+
+<p>```</p>
+
+<p>**由此可见，如果想快读开发一个图形界面，不修改C++底层代码，基本是不可能的。</p>
+
+<ol>
+<li>lua</li>
+</ol>
+
+
+<p>```lua</p>
+
+<p>&mdash; script/ui/ui.lua</p>
+
+<p>&ndash;</p>
+
+<p>```</p>
 
 <p>现有客户端UI的功能主要是以客户端C++功能代码和零星的几个脚本配置文件组织而成。</p>
 
@@ -199,7 +234,7 @@ BehaviorTree = {
 
 <p><blockquote><p></p></p><p><pre><code>    Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.<br/></code></pre></p><p><p></p><footer><strong>see more..  <a href="http://blog.oxrush.com">http://blog.oxrush.com</a>  Welcome to my life blog</strong></footer></blockquote></p>
 
-<p><strong> my email: <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x68;&#114;&#111;&#x6f;&#109;&#x6b;&#x65;&#101;&#112;&#101;&#114;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#104;&#x72;&#x6f;&#111;&#109;&#107;&#x65;&#x65;&#x70;&#101;&#x72;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#104;&#x72;&#111;&#111;&#x6d;&#x6b;&#101;&#101;&#x70;&#x65;&#114;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#104;&#x72;&#111;&#111;&#x6d;&#x6b;&#x65;&#101;&#x70;&#101;&#114;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a> </strong></p>
 ]]></content>
   </entry>
   
