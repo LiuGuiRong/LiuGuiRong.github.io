@@ -158,38 +158,39 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>由此可见，如果想快读开发一个图形界面，不修改C++底层代码，基本是不可能的。</strong></p>
-
 <ol>
 <li>lua</li>
 </ol>
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>ui.lua start:1 mark:1,6</span><a href='http://doc.oxrush.com/design/ClientScriptDesign/passscript/ui/ui.lua'>source link </a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="c1">-- script/ui/ui.lua</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">function</span> <span class="nf">RegisterUIVisibleChangedHandler</span><span class="p">(</span><span class="n">uiName</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">UIVisibleChangedHandlers</span><span class="p">[</span><span class="n">uiName</span><span class="p">]</span> <span class="o">=</span> <span class="n">handler</span><span class="p">;</span>
+</span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">-</span>
+</span><span class='line'><span class="c1">--Called from C++</span>
+</span><span class='line'><span class="k">function</span> <span class="nf">OnUIVisibleChanged</span><span class="p">(</span><span class="n">uiName</span><span class="p">,</span> <span class="n">visible</span><span class="p">)</span>
+</span><span class='line'>        <span class="kd">local</span> <span class="n">handler</span> <span class="o">=</span> <span class="n">UIVisibleChangedHandlers</span><span class="p">[</span><span class="n">uiName</span><span class="p">];</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">handler</span> <span class="k">then</span>
+</span><span class='line'>                <span class="n">handler</span><span class="p">(</span><span class="n">visible</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
 <p>现有客户端UI的功能主要是以客户端C++功能代码和零星的几个脚本配置文件组织而成。</p>
 
 <p>这里列举了几个主要UI相关的C++类，以及lua辅助配置文件：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Class</span> <span class="n">UIManager</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">Class</span> <span class="n">widget</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">Class</span> <span class="n">MiniMap</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
 
 <h5>玩家数据</h5>
 
