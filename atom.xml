@@ -4,7 +4,7 @@
   <title><![CDATA[OXRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-20T10:12:13+00:00</updated>
+  <updated>2013-10-20T10:13:53+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -51,115 +51,75 @@
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
 </pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="n">Class</span> <span class="n">UIManager</span><span class="p">;</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">Class</span> <span class="n">widget</span><span class="p">;</span>
 </span><span class='line'>
 </span><span class='line'><span class="n">Class</span> <span class="n">MiniMap</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="err">···</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="cp">#####玩家数据</span>
-</span><span class='line'>
-</span><span class='line'><span class="cp">#####代码结构</span>
-</span><span class='line'>
-</span><span class='line'><span class="cp">#####事件机制</span>
-</span><span class='line'>
-</span><span class='line'><span class="cp">#####函数扩展</span>
-</span><span class='line'>
-</span><span class='line'><span class="cp">###约束、限制和系统参数   </span>
-</span><span class='line'>
-</span><span class='line'><span class="o">**</span><span class="mf">1.</span> <span class="err">技能逻辑框架已经搭建并测试完成，后续需要结合需求验证框架稳定</span><span class="o">/</span><span class="err">健壮性</span><span class="o">**</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">**</span><span class="mf">2.</span> <span class="n">UI</span><span class="err">逻辑框架待完善</span><span class="o">**</span>
-</span><span class='line'>
-</span><span class='line'><span class="cp">###关于测试</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="cp">####测试类别</span>
-</span><span class='line'>  
-</span><span class='line'>
-</span><span class='line'><span class="cp">####期待反馈</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="p">{</span><span class="o">%</span> <span class="n">codeblock</span> <span class="err">客户端脚本引擎模块</span> <span class="nl">lang:</span><span class="n">lua</span> <span class="nl">start:</span><span class="mi">3</span> <span class="nl">mark:</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span> <span class="nl">http:</span><span class="c1">//192.168.1.101/README.txt source link %}</span>
-</span><span class='line'><span class="n">local</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'><span class="n">local</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span class='line'><span class="n">print</span><span class="p">()</span>
-</span><span class='line'><span class="p">{</span><span class="o">%</span> <span class="n">endcodeblock</span> <span class="o">%</span><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="p">{</span><span class="o">%</span> <span class="n">include_code</span> <span class="n">test</span><span class="p">.</span><span class="n">lua</span> <span class="o">%</span><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ul>
-<li>this is all
+<h5>玩家数据</h5>
 
-<ul>
-<li>all</li>
-</ul>
-</li>
-<li>buble</li>
-</ul>
+<h5>代码结构</h5>
+
+<h5>事件机制</h5>
+
+<h5>函数扩展</h5>
+
+<h3>约束、限制和系统参数</h3>
+
+<p><strong>1. 技能逻辑框架已经搭建并测试完成，后续需要结合需求验证框架稳定/健壮性</strong></p>
+
+<p><strong>2. UI逻辑框架待完善</strong></p>
+
+<h3>关于测试</h3>
+
+<h4>测试类别</h4>
+
+<h4>期待反馈</h4>
+
+<figure class='code'><figcaption><span>客户端脚本引擎模块 start:3 mark:3,4-5</span><a href='http://192.168.1.101/README.txt'>source link </a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'><span class="nb">print</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span> (test.lua)</span> <a href='http://LiuGuiRong.github.io/downloads/code/test.lua'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="kd">local</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span class='line'><span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='cpp'><span class='line'>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="o">*</span> <span class="k">this</span> <span class="n">is</span> <span class="n">all</span>
+</span><span class='line'>  <span class="o">*</span> <span class="n">all</span>
+</span><span class='line'><span class="o">*</span> <span class="n">buble</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
-<li>tooo</li>
-<li>dasda
-&#8220;`</li>
-</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="mf">1.</span> <span class="n">tooo</span>
+</span><span class='line'><span class="mf">2.</span> <span class="n">dasda</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h1>Thisis all</h1>
@@ -249,7 +209,7 @@ BehaviorTree = {
 <blockquote><p>Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.</p><footer><strong>see more..</strong> <cite><a href='http://blog.oxrush.com'>Welcome to My Life Blog</a></cite></footer></blockquote>
 
 
-<p><strong> my email: <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#104;&#114;&#111;&#x6f;&#109;&#x6b;&#x65;&#x65;&#112;&#x65;&#x72;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#104;&#x72;&#x6f;&#111;&#x6d;&#107;&#101;&#x65;&#112;&#101;&#114;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#104;&#x72;&#x6f;&#111;&#109;&#107;&#101;&#x65;&#x70;&#101;&#114;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x68;&#x72;&#x6f;&#111;&#109;&#x6b;&#x65;&#x65;&#112;&#x65;&#x72;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a> </strong></p>
 ]]></content>
   </entry>
   
