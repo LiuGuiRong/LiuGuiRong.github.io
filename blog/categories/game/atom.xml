@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: game | Rusher's Blog With Octopress]]></title>
+  <title><![CDATA[Category: Game | Rusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2013-10-30T01:38:16+00:00</updated>
+  <updated>2013-10-30T01:41:49+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -21,6 +21,549 @@
     <content type="html"><![CDATA[<p><strong>尽可能阐述基于现有技能框架以及策划需求设计的技能实力配置化遇到的问题</strong></p>
 
 <h3>设计</h3>
+
+<hr />
+
+<p>关键词</p>
+
+<pre><code>近战半肉，范围攻击，压制
+</code></pre>
+
+<p>外观描述</p>
+
+<pre><code>关刀女。
+攻击特效带有花瓣效果。
+</code></pre>
+
+<p>技能</p>
+
+<p>普攻-近战</p>
+
+<p>被动-扫千军</p>
+
+<pre><code>穆桂英的普通攻击为横扫动作，对目标外的其他敌对单位造成普通攻击30%的伤害。
+</code></pre>
+
+<p>Q-破天门</p>
+
+<pre><code>对半圈区域进行一次强力横扫攻击，对区域内敌方单位造成x伤害。如果至少命中了一个敌方单位，则溅射出一些花瓣，对范围扇形区域造成y伤害。
+冷却时间4秒。
+</code></pre>
+
+<p>W-穆柯无路</p>
+
+<pre><code>选中一个敌方目标，快速冲锋到目标身后然后进行回身斩击，对身后半圈区域内敌方单位造成x伤害并击退1格。
+冷却时间8秒。
+</code></pre>
+
+<p>E-无双斗气</p>
+
+<pre><code>被动——穆桂英越战越勇，让敌方对这名无双女将刮目相看。穆桂英每对敌方英雄造成一次伤害，则获得x点护盾值，对非英雄单位效果只有1/3。最大护盾值上限y点。护盾值可以代替生命值承担一半穆桂英所受的伤害。
+</code></pre>
+
+<p>R-红颜天将</p>
+
+<pre><code>穆桂英进入全开状态，开始暴风雨般的攻击。站立和移动动作有所改变，突出她的气势和架势，移动速度减慢为70%，周围4格范围内敌方单位被气势压制移动速度减少30%。此状态下穆桂英破天门技能冷却改为1.5秒，穆柯无路冷却改为3秒。状态持续时间8秒。
+</code></pre>
+
+<p>战斗</p>
+
+<pre><code>无双斗气的护盾上限不高，只能保持少量的护盾累积，但在穆桂英持续攻击的情况下能较频繁的补充。
+大招红颜天将状态下穆桂英的输出频率变快，同样也会使她无双斗气累积变快，此时会更难被杀死。
+</code></pre>
+
+<p>使用穆桂英</p>
+
+<pre><code>对线时至少点出一级无双斗气，可以减少被对方蹭血的损失。
+对线时注意站位使用普通攻击可以更有效的输出。
+注意敌方的站位关系，有效使用破天门可以隔山打牛的对敌方英雄蹭血。
+穆柯无路是有效的追击技能，不仅能将目标将回击退，也能用来打断需要维持的技能。
+</code></pre>
+
+<p>大招状态下多用穆柯无路打乱敌方阵形。</p>
+
+<p>对抗穆桂英</p>
+
+<pre><code>与穆桂英对线时要注意避免和前线小兵站的太近或站成直线，很容易被穆桂英蹭血。
+穆桂英会经常保持一定的斗气护盾，如果要攻击穆桂英就要找好机会连续输出，在她技能CD暂时补不到盾的情况下有效输出伤害。如果只是偶尔蹭一下很多伤害都会被护盾吸收掉。
+团战时尽量站开，以减少被穆桂英群攻的情况。
+</code></pre>
+
+<p>游戏感受</p>
+
+<pre><code>一骑当千，拥有霸王风范的女将。在战斗中虽然只是专注攻击一个对手，但是攻击顺带就波及了附近的杂鱼。
+大招状态下强势的压制战场的气势。
+</code></pre>
+
+<hr />
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[游戏客户端脚本系统设计]]></title>
+    <link href="http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui/"/>
+    <updated>2013-10-18T10:00:00+00:00</updated>
+    <id>http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui</id>
+    <content type="html"><![CDATA[<h3>概述</h3>
+
+<p>客户端脚本框架设计文档。</p>
+
+<h4>目标和对象</h4>
+
+<ol>
+<li><p>目标：在不改变C++底层框架的基础上，程序能做到满足需求的灵活修改。</p></li>
+<li><p>对象：游戏逻辑层。UI,SKILL,CONTROL,etc&hellip;</p></li>
+</ol>
+
+
+<h4>范围</h4>
+
+<p>理想化的客户端框架应该是支持一切客户端应用逻辑的热更新与热加载，但是在实际项目中，由于历史造成项目代码复杂度增加的原因，所以完全推翻现有客户端逻辑层改由脚本执行是不可行的，也正因为如此，维持一个较好的逻辑层剥离粒度是本文其中的一个重点设计范畴。</p>
+
+<h3>设计</h3>
+
+<h4>技能</h4>
+
+<p><strong>已完成,详见<a href="http://doc.oxrush.com/design/ClientScriptDesign/ClientDesign.html">link</a></strong></p>
+
+<h4>UI</h4>
+
+<h5>代码结构</h5>
+
+<h6>现有UI结构</h6>
+
+<ol>
+<li>cpp layer</li>
+</ol>
+
+
+<p>```cpp</p>
+
+<p>//widget管理类，负责windows消息，AS消息，以及逻辑帧驱动统一调用。
+Class UIManager;</p>
+
+<p>//窗口基类。所有UI都从该类派生。
+Class widget;</p>
+
+<p>//窗口实例类，对应客户端小地图功能。
+Class MiniMap;</p>
+
+<p>```</p>
+
+<p>2.script layer</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ui.lua start:1 mark:1,6 <a href="http://doc.oxrush.com/design/ClientScriptDesign/passscript/ui/ui.lua">http://doc.oxrush.com/design/ClientScriptDesign/passscript/ui/ui.lua</a> source link </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">function</span> <span class="nf">RegisterUIVisibleChangedHandler</span><span class="p">(</span><span class="n">uiName</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>    <span class="n">UIVisibleChangedHandlers</span><span class="p">[</span><span class="n">uiName</span><span class="p">]</span> <span class="o">=</span> <span class="n">handler</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">Called</span> <span class="n">from</span> <span class="n">C</span><span class="o">++</span>
+</span><span class='line'><span class="k">function</span> <span class="nf">OnUIVisibleChanged</span><span class="p">(</span><span class="n">uiName</span><span class="p">,</span> <span class="n">visible</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>    <span class="kd">local</span> <span class="n">handler</span> <span class="o">=</span> <span class="n">UIVisibleChangedHandlers</span><span class="p">[</span><span class="n">uiName</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">handler</span> <span class="k">then</span>
+</span><span class='line'>            <span class="n">handler</span><span class="p">(</span><span class="n">visible</span><span class="p">);</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>class.lua start:1 mark:1 <a href="http://doc.oxrush.com/design/ClientScriptDesign/passscript/ui/class.lua">http://doc.oxrush.com/design/ClientScriptDesign/passscript/ui/class.lua</a> source link </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">function</span> <span class="nf">InitClassInfo</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">SetClassInfo</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Õ½&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">zhanA&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">TargetZhan&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Rage&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="o">...</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h6>新的结构</h6>
+
+<ol>
+<li>cpp layer</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>UIAdapter.cpp start:1 mark:1 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c1">//游戏界面管理类</span>
+</span><span class='line'><span class="k">class</span> <span class="nc">UIAdapter</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">public</span><span class="o">:&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="c1">//AS统一调用入口</span>
+</span><span class='line'><span class="n">Static</span> <span class="kt">bool</span> <span class="n">OnAsEvt</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//c++事件统一回调入口</span>
+</span><span class='line'><span class="n">Static</span> <span class="kt">bool</span> <span class="n">OnGameEvt</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//逻辑帧驱动</span>
+</span><span class='line'><span class="n">Static</span> <span class="kt">void</span> <span class="n">OnLogicUpdate</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//渲染帧驱动</span>
+</span><span class='line'><span class="n">Static</span> <span class="kt">void</span> <span class="n">OnRenderUpdate</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">//脚本函数CALL</span>
+</span><span class='line'><span class="n">Static</span> <span class="kt">bool</span> <span class="n">CallLua</span><span class="p">(</span><span class="n">luaobj</span><span class="p">,</span><span class="n">args</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">private</span><span class="o">:&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">};</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>C++方面，去除了所有的实例类以及弱化了c++界面管理机制，改由lua中去管理，并且增加了lua的函数调用功能。</strong></p>
+
+<ol>
+<li>srcipt layer</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>widget.lua start:1 mark:1 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nb">module</span><span class="p">(</span><span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">widget</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeeall</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nb">require</span> <span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">class</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">widget</span> <span class="o">=</span> <span class="n">class</span><span class="p">.</span><span class="n">new</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="err">创建窗口实例</span>
+</span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">create</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">ui_name</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="kd">local</span> <span class="n">inst</span> <span class="o">=</span> <span class="n">create</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">--dd to listlist</span>
+</span><span class='line'><span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">add</span><span class="p">()</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="err">逻辑帧</span>
+</span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">on_logic_update</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="err">渲染帧</span>
+</span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">on_render_update</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="err">显示</span>
+</span><span class='line'><span class="n">widget</span><span class="p">.</span><span class="n">show</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="err">隐藏</span>
+</span><span class='line'><span class="n">wdget</span><span class="p">.</span><span class="n">hide</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>uimgr.lua start:1 mark:1 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nb">module</span><span class="p">(</span><span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">uimgr</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeeall</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="err">逻辑层</span><span class="n">UI</span><span class="err">列表</span>
+</span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">ui_list</span> <span class="o">=</span> <span class="n">uimgr</span><span class="p">.</span><span class="n">ui_list</span> <span class="ow">or</span> <span class="p">{}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="err">程式每帧</span>
+</span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">onupdate</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="c1">--if render...</span>
+</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">update_render</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">--if logic...</span>
+</span><span class='line'><span class="n">self</span><span class="p">.</span><span class="n">update_logic</span><span class="p">()</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="err">创建窗口实例</span>
+</span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">create</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">ui_name</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="kd">local</span> <span class="n">inst</span> <span class="o">=</span> <span class="n">create</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">--add to listlist</span>
+</span><span class='line'><span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">add</span><span class="p">()</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="err">事件回调</span>
+</span><span class='line'><span class="n">uimgr</span><span class="p">.</span><span class="n">onevt</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">evt_type</span><span class="p">,</span><span class="n">args</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>as.lua start:1 mark:1 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nb">module</span><span class="p">(</span><span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">ui</span><span class="p">.</span><span class="n">as</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="nb">package.seeall</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>main_skill_bar.lua start:1 mark:1 </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nb">module</span><span class="p">(</span><span class="err">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">ui</span><span class="p">.</span><span class="n">main_skill_bar</span><span class="err">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="nb">package.seeall</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">&amp;</span><span class="n">mdash</span><span class="p">;</span><span class="n">ui</span><span class="err">对应</span><span class="n">as</span><span class="err">对象</span>
+</span><span class='line'><span class="kd">local</span> <span class="n">as_func</span> <span class="o">=</span><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>**新的脚本框架，是以老的c++UI管理类的管理方式为基础的扩展。</p>
+
+<h5>玩家数据</h5>
+
+<p>考虑到c++层对玩家数据的依赖，考虑使用老的数据方式，即paramtable管理方式。最后具体使用方式，技术会议再讨论。</p>
+
+<h5>事件机制</h5>
+
+<p>基于现有的客户端事件机制，增加UI事件以及AS事件类型。</p>
+
+<ol>
+<li>UI事件：</li>
+</ol>
+
+
+<p>从开启客户端，到玩家进入游戏场景之间的各个阶段，都需要使用UI事件机制，如玩家创建角色，进入场景等，脚本层会对相应的UI逻辑做处理.</p>
+
+<ol>
+<li>AS事件：</li>
+</ol>
+
+
+<p>c++需要做的只是做一个lua注册AS事件的函数绑定，以及AS事件的统一回调，做一个适配层。</p>
+
+<ol>
+<li>键盘事件：</li>
+</ol>
+
+
+<p>主要为一些进入场景能通过快捷键打开某一个UI的提供机制。UI的快捷键纳入客户端脚本热键模块统一管理。</p>
+
+<h5>函数扩展</h5>
+
+<h2>tolua++ binder:</h2>
+
+<pre><code>void ASInvolk();
+
+void ConnectAS();
+
+void NewMsg();
+
+void MsgAddLong();
+
+void MsgAddStr();
+
+...
+</code></pre>
+
+<hr />
+
+<h5>设计中遇到问题</h5>
+
+<p>**实际在分析c++界面实例类的时候，会出现比较复杂的游戏逻辑处理，可能会操作多个消息的解码创建。想法是把客户端处理消息的操作提供给lua,由lua每个界面实例自己去解决。</p>
+
+<h3>约束、限制和系统参数</h3>
+
+<p><strong>1. 技能逻辑框架已经搭建并测试完成，后续需要结合需求验证框架稳定/健壮性</strong></p>
+
+<p><strong>2. UI逻辑框架待完善</strong></p>
+
+<h3>关于测试</h3>
+
+<p>通过创建界面实例，由程序发起进行测试。</p>
+
+<h4>测试类别</h4>
+
+<p><strong>whitebox</strong></p>
+
+<h4>期待反馈</h4>
+
+<p><strong> my email: <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x68;&#x72;&#x6f;&#111;&#x6d;&#x6b;&#101;&#101;&#112;&#101;&#x72;&#x40;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#104;&#114;&#111;&#x6f;&#x6d;&#x6b;&#x65;&#101;&#112;&#101;&#x72;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a> </strong></p>
+
+<p><strong> <a href="http://www.lua.org/manual/5.1/">lua5.1 manual</a> </strong></p>
 ]]></content>
   </entry>
   
