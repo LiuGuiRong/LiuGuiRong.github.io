@@ -9,8 +9,8 @@
   <meta name="author" content="OX RuHSER">
 
   
-  <meta name="description" content="设计目地： 通过一些UI上的设置，可以快速开发一个简单的技能，包括正确执行各个阶段服务器逻辑(超级移动，碰撞等)/客户端特效播放。类似于war3的地图编辑器的技能模块功能
-">
+  <meta name="description" content="概述 客户端脚本框架设计文档。 目标和对象 目标：在不改变C++底层框架的基础上，程序能做到满足需求的灵活修改。
+对象：游戏逻辑层。UI,SKILL,CONTROL,etc&hellip; 范围 理想化的客户端框架应该是支持一切客户端应用逻辑的热更新与热加载，但是在实际项目中， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,55 +68,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/30/skill-framework-base-on-demand/">游戏技能组件化</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-30T01:31:00+00:00" pubdate data-updated="true">Oct 30<span>th</span>, 2013</time>
-        
-        
-          | 
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/game/'>Game</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>设计目地：</h3>
-
-<p><strong>通过一些UI上的设置，可以快速开发一个简单的技能，包括正确执行各个阶段服务器逻辑(超级移动，碰撞等)/客户端特效播放。类似于war3的地图编辑器的技能模块功能</strong></p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -549,7 +500,7 @@ void MsgAddStr();
 
 <h4>期待反馈</h4>
 
-<p><strong> my email: <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#104;&#114;&#111;&#111;&#x6d;&#107;&#x65;&#x65;&#112;&#x65;&#114;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#104;&#x72;&#111;&#111;&#x6d;&#107;&#101;&#x65;&#112;&#101;&#114;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x68;&#x72;&#111;&#111;&#x6d;&#107;&#101;&#x65;&#x70;&#101;&#x72;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">&#104;&#114;&#111;&#111;&#x6d;&#x6b;&#101;&#101;&#x70;&#x65;&#114;&#64;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;</a> </strong></p>
 
 <p><strong> <a href="http://www.lua.org/manual/5.1/">lua5.1 manual</a> </strong></p>
 </div>
@@ -570,10 +521,6 @@ void MsgAddStr();
     <section class="first odd">
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/10/30/skill-framework-base-on-demand/">游戏技能组件化</a>
-      </li>
     
       <li class="post">
         <a href="/blog/2013/10/18/gc-smart-ui/">游戏客户端脚本系统设计</a>
