@@ -4,7 +4,7 @@
   <title><![CDATA[Rusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2014-01-24T05:51:07+00:00</updated>
+  <updated>2014-01-24T06:01:01+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -24,24 +24,190 @@
 
 <h3>设计</h3>
 
-<p><em>脚本对象静态类图：</em>
-<img src="http://LiuGuiRong.github.io/images/duplicate.png" alt="Alt text" /></p>
+<h5>脚本对象静态类图</h5>
 
-<h1>副本创建时序图</h1>
+<p><img src="http://LiuGuiRong.github.io/images/duplicate.png" alt="Alt text" /></p>
+
+<h5>副本创建时序图</h5>
 
 <p><img src="http://LiuGuiRong.github.io/images/duplicate_1.png" alt="Alt text" /></p>
 
-<figure class='code'><figcaption><span>class.lua start:1 mark:1 </span></figcaption>
+<h5>小兵与野怪创建</h5>
+
+<figure class='code'><figcaption><span>moba.lua start:1 mark:1 </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">function</span> <span class="nf">test</span><span class="p">()</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+</pre></td><td class='code'><pre><code class='lua'><span class='line'><span class="k">function</span> <span class="nf">moba</span><span class="p">:</span><span class="n">start_create_creeps</span><span class="p">()</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">debug_mode</span> <span class="k">then</span>
+</span><span class='line'>        <span class="k">return</span>
+</span><span class='line'>    <span class="k">end</span>
 </span><span class='line'>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">rule_conf</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">rule_conf</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">map_conf</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">map_conf</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">-- 首次小兵刷新时间，单位秒，90代表游戏开始1分30秒时刷新</span>
+</span><span class='line'>  <span class="kd">local</span> <span class="n">CreepsArrivingTime</span> <span class="o">=</span> <span class="n">rule_conf</span><span class="p">.</span><span class="n">CreepsArrivingTime</span> <span class="o">*</span> <span class="mi">1000</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">-- 同一波小兵，每个之间的出生间隔，单位秒，可以填小数</span>
+</span><span class='line'>  <span class="kd">local</span> <span class="n">CreepsBirthInterval</span> <span class="o">=</span> <span class="n">rule_conf</span><span class="p">.</span><span class="n">CreepsBirthInterval</span> <span class="o">*</span> <span class="mi">1000</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">-- 每波小兵刷新间隔，该间隔不受一波内小兵出生间隔影响</span>
+</span><span class='line'>  <span class="kd">local</span> <span class="n">CreepsWaveCycle</span> <span class="o">=</span> <span class="n">rule_conf</span><span class="p">.</span><span class="n">CreepsWaveCycle</span> <span class="o">*</span> <span class="mi">1000</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">-- 所有怪物的时间成长BUFF每多少秒增加1层</span>
+</span><span class='line'>  <span class="kd">local</span> <span class="n">MonsterGrowUpCycle</span> <span class="o">=</span> <span class="n">rule_conf</span><span class="p">.</span><span class="n">MonsterGrowUpCycle</span> <span class="o">*</span> <span class="mi">1000</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">-- 小兵配置</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">Creeps</span> <span class="o">=</span> <span class="n">rule_conf</span><span class="p">.</span><span class="n">Creeps</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">Bot_Creeps</span> <span class="o">=</span> <span class="n">Creeps</span><span class="p">.</span><span class="n">Bot</span>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">Top_Creeps</span> <span class="o">=</span> <span class="n">Creeps</span><span class="p">.</span><span class="n">Top</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">local</span> <span class="n">times</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nb">table.insert</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">triggers</span><span class="p">,</span> <span class="n">schedule</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">tid</span><span class="p">,</span> <span class="n">currtime</span><span class="p">)</span>
+</span><span class='line'>                <span class="n">times</span> <span class="o">=</span> <span class="n">times</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>                <span class="kd">local</span> <span class="n">bot_creeps</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="k">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">Bot_Creeps</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'>                    <span class="k">if</span> <span class="n">v</span><span class="p">.</span><span class="n">Cycle</span> <span class="k">then</span>
+</span><span class='line'>                        <span class="k">if</span> <span class="n">times</span> <span class="o">%</span> <span class="n">v</span><span class="p">.</span><span class="n">Cycle</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">then</span>
+</span><span class='line'>                            <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">Amount</span><span class="p">,</span> <span class="mi">1</span> <span class="k">do</span>
+</span><span class='line'>                                <span class="nb">table.insert</span><span class="p">(</span><span class="n">bot_creeps</span><span class="p">,</span> <span class="p">{</span><span class="n">id</span> <span class="o">=</span> <span class="n">v</span><span class="p">.</span><span class="n">ID</span><span class="p">})</span>
+</span><span class='line'>                            <span class="k">end</span>
+</span><span class='line'>                        <span class="k">end</span>
+</span><span class='line'>                    <span class="k">end</span>
+</span><span class='line'>                <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>                <span class="kd">local</span> <span class="n">top_creeps</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>                <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="k">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">Top_Creeps</span><span class="p">)</span> <span class="k">do</span>
+</span><span class='line'>                    <span class="k">if</span> <span class="n">v</span><span class="p">.</span><span class="n">Cycle</span> <span class="k">then</span>
+</span><span class='line'>                        <span class="k">if</span> <span class="n">times</span> <span class="o">%</span> <span class="n">v</span><span class="p">.</span><span class="n">Cycle</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">then</span>
+</span><span class='line'>                            <span class="k">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">Amount</span><span class="p">,</span> <span class="mi">1</span> <span class="k">do</span>
+</span><span class='line'>                                <span class="nb">table.insert</span><span class="p">(</span><span class="n">top_creeps</span><span class="p">,</span> <span class="p">{</span><span class="n">id</span> <span class="o">=</span> <span class="n">v</span><span class="p">.</span><span class="n">ID</span><span class="p">})</span>
+</span><span class='line'>                            <span class="k">end</span>
+</span><span class='line'>                        <span class="k">end</span>
+</span><span class='line'>                    <span class="k">end</span>
+</span><span class='line'>                <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>                <span class="kd">local</span> <span class="n">creeps</span> <span class="o">=</span> <span class="p">{</span><span class="n">bot_creeps</span><span class="p">,</span> <span class="n">top_creeps</span><span class="p">}</span>
+</span><span class='line'>                <span class="kd">local</span> <span class="n">red_creeps_num</span> <span class="o">=</span> <span class="o">#</span><span class="n">bot_creeps</span>
+</span><span class='line'>                <span class="kd">local</span> <span class="n">blue_creeps_num</span> <span class="o">=</span> <span class="o">#</span><span class="n">top_creeps</span>
+</span><span class='line'>                <span class="kd">local</span> <span class="n">num</span> <span class="o">=</span> <span class="n">red_creeps_num</span>
+</span><span class='line'>
+</span><span class='line'>                <span class="nb">assert</span><span class="p">(</span><span class="n">red_creeps_num</span> <span class="o">==</span> <span class="n">blue_creeps_num</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>                <span class="kd">local</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'>                <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
+</span><span class='line'>                    <span class="n">schedule</span><span class="p">(</span><span class="k">function</span><span class="p">(</span><span class="n">tid</span><span class="p">,</span> <span class="n">currtime</span><span class="p">)</span>
+</span><span class='line'>                                <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">running</span> <span class="o">==</span> <span class="kc">false</span> <span class="k">then</span>
+</span><span class='line'>                                    <span class="k">return</span> <span class="kc">false</span>
+</span><span class='line'>                                <span class="k">end</span>
+</span><span class='line'>                                <span class="k">if</span> <span class="n">bot_creeps</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">==</span> <span class="kc">nil</span> <span class="ow">or</span> <span class="n">top_creeps</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">then</span>
+</span><span class='line'>                                    <span class="c1">--默认增加一次超级兵的检查</span>
+</span><span class='line'>                                    <span class="n">self</span><span class="p">:</span><span class="n">check_super_creeps</span><span class="p">()</span>
+</span><span class='line'>                                <span class="k">else</span>
+</span><span class='line'>                                    <span class="n">self</span><span class="p">:</span><span class="n">create_bot_group_creeps</span><span class="p">(</span><span class="n">bot_creeps</span><span class="p">[</span><span class="n">count</span><span class="p">].</span><span class="n">id</span><span class="p">)</span>
+</span><span class='line'>                                    <span class="n">self</span><span class="p">:</span><span class="n">create_top_group_creeps</span><span class="p">(</span><span class="n">top_creeps</span><span class="p">[</span><span class="n">count</span><span class="p">].</span><span class="n">id</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>                                    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>                                <span class="k">end</span>
+</span><span class='line'>                                <span class="k">return</span> <span class="kc">true</span>
+</span><span class='line'>                             <span class="k">end</span><span class="p">,</span>
+</span><span class='line'>                             <span class="mi">0</span><span class="p">,</span>
+</span><span class='line'>                             <span class="n">CreepsBirthInterval</span><span class="p">,</span>
+</span><span class='line'>                             <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>                    <span class="p">)</span>
+</span><span class='line'>                <span class="k">end</span>
+</span><span class='line'>                <span class="k">return</span> <span class="kc">true</span>
+</span><span class='line'>             <span class="k">end</span><span class="p">,</span>
+</span><span class='line'>             <span class="n">CreepsArrivingTime</span><span class="p">,</span> <span class="n">CreepsWaveCycle</span><span class="p">))</span>
 </span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-
+<pre><code>使用了多个定时器来管理小兵的创建，详细见代码。是整个moba系统中逻辑比较多的函数。
+</code></pre>
 ]]></content>
   </entry>
   
@@ -442,7 +608,7 @@ void MsgAddStr();
 
 <h4>期待反馈</h4>
 
-<p><strong> my email: <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x68;&#114;&#x6f;&#111;&#x6d;&#107;&#101;&#101;&#112;&#x65;&#x72;&#64;&#x67;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;">&#104;&#x72;&#111;&#111;&#109;&#x6b;&#101;&#x65;&#112;&#x65;&#x72;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#104;&#114;&#x6f;&#111;&#x6d;&#107;&#x65;&#101;&#x70;&#x65;&#x72;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x68;&#x72;&#x6f;&#111;&#109;&#x6b;&#x65;&#x65;&#x70;&#101;&#x72;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;</a> </strong></p>
 
 <p><strong> <a href="http://www.lua.org/manual/5.1/">lua5.1 manual</a> </strong></p>
 ]]></content>
