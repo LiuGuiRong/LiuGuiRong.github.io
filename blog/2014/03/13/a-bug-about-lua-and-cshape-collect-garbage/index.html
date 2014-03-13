@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>游戏客户端脚本系统设计 - Rusher's Blog With Octopress</title>
+  <title>记一个lua与c#垃圾回收bug - Rusher's Blog With Octopress</title>
   <meta name="author" content="OX RuHSER">
 
   
-  <meta name="description" content="概述 客户端脚本框架设计文档。 目标和对象 目标：在不改变C++底层框架的基础上，程序能做到满足需求的灵活修改。
-对象：游戏逻辑层。UI,SKILL,CONTROL,etc&hellip; 范围 理想化的客户端框架应该是支持一切客户端应用逻辑的热更新与热加载，但是在实际项目中， &hellip;">
+  <meta name="description" content="前记 入职新公司了，之前的公司的同事算 客户端脚本框架设计文档。 目标和对象 目标：在不改变C++底层框架的基础上，程序能做到满足需求的灵活修改。
+对象：游戏逻辑层。UI,SKILL,CONTROL,etc&hellip; 范围 理想化的客户端框架应该是支持一切客户端应用逻辑的热更新与热加载， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui/">
+  <link rel="canonical" href="http://LiuGuiRong.github.io/blog/2014/03/13/a-bug-about-lua-and-cshape-collect-garbage/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -71,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">游戏客户端脚本系统设计</h1>
+      <h1 class="entry-title">记一个lua与c#垃圾回收bug</h1>
     
     
       <p class="meta">
@@ -87,7 +87,7 @@
   
 
 
-<time datetime="2013-10-18T10:00:00+00:00" pubdate data-updated="true">Oct 18<span>th</span>, 2013</time>
+<time datetime="2014-03-13T06:21:00+00:00" pubdate data-updated="true">Mar 13<span>th</span>, 2014</time>
         
         
       </p>
@@ -95,7 +95,11 @@
   </header>
 
 
-<div class="entry-content"><h3>概述</h3>
+<div class="entry-content"><h3>前记</h3>
+
+<p>入职新公司了，之前的公司的同事算</p>
+
+<h3></h3>
 
 <p>客户端脚本框架设计文档。</p>
 
@@ -487,7 +491,7 @@ void MsgAddStr();
 
 <h4>期待反馈</h4>
 
-<p><strong> my email: <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#104;&#114;&#x6f;&#111;&#x6d;&#107;&#101;&#101;&#x70;&#x65;&#x72;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x68;&#114;&#x6f;&#111;&#x6d;&#107;&#x65;&#101;&#x70;&#x65;&#114;&#64;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x68;&#114;&#111;&#111;&#109;&#107;&#x65;&#x65;&#112;&#101;&#114;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x68;&#114;&#x6f;&#111;&#x6d;&#x6b;&#x65;&#x65;&#112;&#101;&#114;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;</a> </strong></p>
 
 <p><strong> <a href="http://www.lua.org/manual/5.1/">lua5.1 manual</a> </strong></p>
 </div>
@@ -512,12 +516,12 @@ void MsgAddStr();
   
 
 
-<time datetime="2013-10-18T10:00:00+00:00" pubdate data-updated="true">Oct 18<span>th</span>, 2013</time>
+<time datetime="2014-03-13T06:21:00+00:00" pubdate data-updated="true">Mar 13<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/game/'>Game</a>
+    <a class='category' href='/blog/categories/c-number/'>c#</a>, <a class='category' href='/blog/categories/lua/'>lua</a>, <a class='category' href='/blog/categories/la-ji-hui-shou/'>垃圾回收</a>
   
 </span>
 
@@ -526,7 +530,7 @@ void MsgAddStr();
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui/" data-via="" data-counturl="http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://LiuGuiRong.github.io/blog/2014/03/13/a-bug-about-lua-and-cshape-collect-garbage/" data-via="" data-counturl="http://LiuGuiRong.github.io/blog/2014/03/13/a-bug-about-lua-and-cshape-collect-garbage/" >Tweet</a>
   
   
   
@@ -535,8 +539,8 @@ void MsgAddStr();
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2013/10/18/gc-smart-ui/" title="Previous Post: 游戏客户端脚本系统设计">&laquo; 游戏客户端脚本系统设计</a>
       
-        <a class="basic-alignment right" href="/blog/2014/03/13/a-bug-about-lua-and-cshape-collect-garbage/" title="Next Post: 记一个lua与c#垃圾回收bug">记一个lua与c#垃圾回收bug &raquo;</a>
       
     </p>
   </footer>
