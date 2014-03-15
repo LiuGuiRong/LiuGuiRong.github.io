@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 垃圾回收 | Rusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/la-ji-hui-shou/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2014-03-13T06:26:48+00:00</updated>
+  <updated>2014-03-15T05:35:47+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -14,33 +14,16 @@
 
   
   <entry>
-    <title type="html"><![CDATA[记一个lua与c#垃圾回收bug]]></title>
+    <title type="html"><![CDATA[记一个lua与c#双重垃圾回收引起的bug]]></title>
     <link href="http://LiuGuiRong.github.io/blog/2014/03/13/a-bug-about-lua-and-cshape-collect-garbage/"/>
     <updated>2014-03-13T06:21:00+00:00</updated>
     <id>http://LiuGuiRong.github.io/blog/2014/03/13/a-bug-about-lua-and-cshape-collect-garbage</id>
     <content type="html"><![CDATA[<h3>前记</h3>
 
-<p>入职新公司了，之前的公司的同事算</p>
+<p>由于各种的原因，离开了入职5年的公司，离开了之前的端游团队，很奇怪，没一点怀念。
+经好友介绍入职到了现在的公司做服务器。由于之前一直负责部分项目运营和压测工具开发维护，新的团队也期望能给出一个专业化的压力测试工具，当然，新来公司，又因为之前在断断续续做这个事有一些经验和心得，就全力的开始了设计和开发。 说到这里，本文的重点来了..</p>
 
 <h3></h3>
-
-<p>客户端脚本框架设计文档。</p>
-
-<h4>目标和对象</h4>
-
-<ol>
-<li><p>目标：在不改变C++底层框架的基础上，程序能做到满足需求的灵活修改。</p></li>
-<li><p>对象：游戏逻辑层。UI,SKILL,CONTROL,etc&hellip;</p></li>
-</ol>
-
-
-<h4>范围</h4>
-
-<p>理想化的客户端框架应该是支持一切客户端应用逻辑的热更新与热加载，但是在实际项目中，由于历史造成项目代码复杂度增加的原因，所以完全推翻现有客户端逻辑层改由脚本执行是不可行的，也正因为如此，维持一个较好的逻辑层剥离粒度是本文其中的一个重点设计范畴。</p>
-
-<h3>设计</h3>
-
-<h4>技能</h4>
 
 <p><strong>已完成,详见<a href="http://doc.oxrush.com/design/ClientScriptDesign/ClientDesign.html">link</a></strong></p>
 
@@ -479,7 +462,7 @@ void MsgAddStr();
 
 <h4>期待反馈</h4>
 
-<p><strong> my email: <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x68;&#x72;&#x6f;&#111;&#109;&#x6b;&#x65;&#x65;&#x70;&#101;&#x72;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#104;&#x72;&#x6f;&#x6f;&#109;&#107;&#x65;&#x65;&#112;&#x65;&#x72;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x68;&#x72;&#x6f;&#x6f;&#109;&#x6b;&#x65;&#x65;&#112;&#x65;&#114;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x68;&#114;&#x6f;&#x6f;&#109;&#x6b;&#101;&#101;&#112;&#101;&#x72;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;</a> </strong></p>
 
 <p><strong> <a href="http://www.lua.org/manual/5.1/">lua5.1 manual</a> </strong></p>
 ]]></content>
