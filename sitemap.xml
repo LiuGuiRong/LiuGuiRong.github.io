@@ -1,10 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui-/</loc>
-        <lastmod>2014-05-05T07:12:42+00:00</lastmod>
-    </url>
-    <url>
         <loc>http://LiuGuiRong.github.io/blog/2014/05/05/cshape-and-lua-rb-gc-bug/</loc>
         <lastmod>2014-05-05T09:22:36+00:00</lastmod>
     </url>
