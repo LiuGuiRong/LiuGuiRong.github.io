@@ -4,7 +4,7 @@
   <title><![CDATA[Category: profiler | Rusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/profiler/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2014-05-05T08:55:48+00:00</updated>
+  <updated>2014-05-05T09:16:14+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -18,7 +18,7 @@
     <link href="http://LiuGuiRong.github.io/blog/2014/05/05/cshape-and-lua-rb-gc-bug/"/>
     <updated>2014-05-05T07:02:00+00:00</updated>
     <id>http://LiuGuiRong.github.io/blog/2014/05/05/cshape-and-lua-rb-gc-bug</id>
-    <content type="html"><![CDATA[<h3>为什么要在u3d使用lua这种脚本语言.</h3>
+    <content type="html"><![CDATA[<h3>为什么要在u3d使用lua.</h3>
 
 <p>一款游戏上架到app商店的时候，审核比较繁琐，使用lua可以很好的实现一些逻辑bug或者新内容的热更新，相当于我们可以绕开app商店繁琐的审核，而直接在用户端做一些补丁工作。</p>
 
