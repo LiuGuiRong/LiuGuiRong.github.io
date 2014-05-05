@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Rusher's Blog With Octopress]]></title>
+  <title><![CDATA[OxRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2014-05-05T09:22:56+00:00</updated>
+  <updated>2014-05-05T11:26:23+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -451,7 +451,7 @@ void MsgAddStr();
 
 <h4>期待反馈</h4>
 
-<p><strong> my email: <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x68;&#x72;&#x6f;&#111;&#x6d;&#107;&#101;&#101;&#112;&#101;&#x72;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#104;&#x72;&#x6f;&#111;&#109;&#107;&#x65;&#x65;&#x70;&#101;&#114;&#x40;&#x67;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x68;&#114;&#x6f;&#111;&#x6d;&#x6b;&#x65;&#x65;&#x70;&#101;&#114;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#104;&#x72;&#111;&#x6f;&#109;&#107;&#x65;&#101;&#x70;&#x65;&#x72;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a> </strong></p>
 
 <p><strong> <a href="http://www.lua.org/manual/5.1/">lua5.1 manual</a> </strong></p>
 ]]></content>
