@@ -4,7 +4,7 @@
   <title><![CDATA[Category: unity3d | Rusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/unity3d/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2014-05-05T08:54:40+00:00</updated>
+  <updated>2014-05-05T08:55:48+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[unity3d如何使用lua, 浅浅谈一下项目中遇到的一些问题]]></title>
+    <title type="html"><![CDATA[unity3d如何使用lua]]></title>
     <link href="http://LiuGuiRong.github.io/blog/2014/05/05/cshape-and-lua-rb-gc-bug/"/>
     <updated>2014-05-05T07:02:00+00:00</updated>
     <id>http://LiuGuiRong.github.io/blog/2014/05/05/cshape-and-lua-rb-gc-bug</id>
