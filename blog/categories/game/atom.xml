@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Game | Rusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/game/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2014-05-05T06:55:04+00:00</updated>
+  <updated>2014-05-05T07:15:13+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[游戏客户端脚本系统设计]]></title>
-    <link href="http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui/"/>
+    <link href="http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui-/"/>
     <updated>2013-10-18T10:00:00+00:00</updated>
-    <id>http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui</id>
+    <id>http://LiuGuiRong.github.io/blog/2013/10/18/gc-smart-ui-</id>
     <content type="html"><![CDATA[<h3>概述</h3>
 
 <p>客户端脚本框架设计文档。</p>
@@ -127,7 +127,7 @@ Class MiniMap;</p>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">function</span> <span class="nf">InitClassInfo</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">SetClassInfo</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Õ½&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">zhanA&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">TargetZhan&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Rage&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">SetClassInfo</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">??&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">zhanA&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">TargetZhan&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">Rage&quot;</span><span class="p">);</span>
 </span><span class='line'><span class="o">...</span>
 </span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
@@ -475,7 +475,7 @@ void MsgAddStr();
 
 <h4>期待反馈</h4>
 
-<p><strong> my email: <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#104;&#x72;&#x6f;&#x6f;&#x6d;&#107;&#x65;&#101;&#x70;&#101;&#x72;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x68;&#x72;&#x6f;&#x6f;&#109;&#107;&#x65;&#x65;&#112;&#x65;&#x72;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a> </strong></p>
+<p><strong> my email: <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#104;&#114;&#x6f;&#111;&#x6d;&#x6b;&#101;&#101;&#112;&#x65;&#x72;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">&#104;&#x72;&#x6f;&#111;&#x6d;&#x6b;&#x65;&#x65;&#x70;&#101;&#x72;&#x40;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a> </strong></p>
 
 <p><strong> <a href="http://www.lua.org/manual/5.1/">lua5.1 manual</a> </strong></p>
 ]]></content>
