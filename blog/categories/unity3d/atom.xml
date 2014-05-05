@@ -4,7 +4,7 @@
   <title><![CDATA[Category: unity3d | Rusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/unity3d/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2014-05-05T09:21:36+00:00</updated>
+  <updated>2014-05-05T09:22:56+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -42,11 +42,15 @@
 
 <p>u3d自带性能调优工具，这里就不多说了。下面谈谈lua：</p>
 
-<h4>关于内存泄漏. lua的内存泄漏主要是由于复杂数据结构比如table,引用了对象但是在逻辑执行完的时候并没有解引用引起的。相对于静态语言很多优秀的调优工具如vs上的vld等，带自动垃圾回收的语言可以通过对象快照来分辨内存使用情况。这就需要我们找到一个逻辑执行完毕的开始与结束的位置，做两次快照，以鉴别是否产生了内存泄漏。 说直白一点，比如游戏的时候，进入场景，打一些怪物，开启一些功能，再完整退出。 这就是一个整个游戏的开始于结束点。快照并做一些对比。</h4>
+<h4>关于内存泄漏.</h4>
+
+<p>lua的内存泄漏主要是由于复杂数据结构比如table,引用了对象但是在逻辑执行完的时候并没有解引用引起的。相对于静态语言很多优秀的调优工具如vs上的vld等，带自动垃圾回收的语言可以通过对象快照来分辨内存使用情况。这就需要我们找到一个逻辑执行完毕的开始与结束的位置，做两次快照，以鉴别是否产生了内存泄漏。 说直白一点，比如游戏的时候，进入场景，打一些怪物，开启一些功能，再完整退出。 这就是一个整个游戏的开始于结束点。快照并做一些对比。</p>
 
 <p>lua快照工具：<a href="https://github.com/cloudwu/lua-snapshot">snapshot</a></p>
 
-<h4>关于函数效率. 这个就不多说了，比较简单，可以自己写一个profiler，或者使用这个模块<a href="https://github.com/LiuGuiRong/lua_profiler_4_pub">lua profiler</a></h4>
+<h4>关于函数效率.</h4>
+
+<p>这个就不多说了，比较简单，可以自己写一个profiler，或者使用这个模块<a href="https://github.com/LiuGuiRong/lua_profiler_4_pub">lua profiler</a></p>
 ]]></content>
   </entry>
   
