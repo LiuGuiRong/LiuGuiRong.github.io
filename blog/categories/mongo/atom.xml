@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[OxRusher's Blog With Octopress]]></title>
-  <link href="http://LiuGuiRong.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: mongo | OxRusher's Blog With Octopress]]></title>
+  <link href="http://LiuGuiRong.github.io/blog/categories/mongo/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
   <updated>2014-05-12T12:42:34+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
@@ -117,47 +117,6 @@ return
 <p>基本没什么说的，直接看代码吧</p>
 
 <h3>golang真正的并发编程特性还没有接触，后续会继续尝试。</h3>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[unity3d如何使用lua]]></title>
-    <link href="http://LiuGuiRong.github.io/blog/2014/05/05/cshape-and-lua-rb-gc-bug/"/>
-    <updated>2014-05-05T07:02:00+00:00</updated>
-    <id>http://LiuGuiRong.github.io/blog/2014/05/05/cshape-and-lua-rb-gc-bug</id>
-    <content type="html"><![CDATA[<h3>为什么要在u3d使用lua.</h3>
-
-<p>一款游戏上架到app商店的时候，审核比较繁琐，使用lua可以很好的实现一些逻辑bug或者新内容的热更新，相当于我们可以绕开app商店繁琐的审核，而直接在用户端做一些补丁工作。</p>
-
-<p>lua简单易学并且如果底层支持力度足够的情况下可以实现所有你能想的到游戏功能，当然招聘相关的程序员,成本也低，这点对于小公司也足够有吸引力。</p>
-
-<h3>lua以何种方式于u3d结合.</h3>
-
-<p>使用一些第三方C#版的Lua(e.g. <a href="https://github.com/xebecnan/UniLua">UniLua</a>), 但确实效率不高，使用lua动态库可以解决这一问题。</p>
-
-<p>不过，这样做lua协程特性会有问题, 但协程的使用一般也是用于搭建程序框架，对用lua编写简单逻辑，看来是没有影响了。</p>
-
-<h3>以 dll方式使用lua，需要注意的一些隐秘bug.</h3>
-
-<p>在lua逻辑中，一般来说，都会模拟注册一个类并使用lua自定义数据类型userdate来保存。在保存的时候，通过改写userdata的元方法，到达模拟面向对象的目的。可能会出现下面的绑定代码.</p>
-
-<p>lua_state.register(class_name, function, gc)</p>
-
-<p>但是大家都知道，cshape和lua都是基于垃圾回收机制的语言，在我们注册一个函数给lua的时候，其实是使用了cshape的特性 delegate. 如果我们直接使用cshape的类方法(即使是static)去注册给lua的话，cshape在下一次垃圾回收的时候就会主动回收该委托，以至于lua找不到该委托而报错。解决办法是使用一个静态变量来存储lua需要使用的函数方法，以确保在程序退出的时候才施放，保持lua一直有绑定的cshape方法可以使用。</p>
-
-<h3>关于如何调优</h3>
-
-<p>u3d自带性能调优工具，这里就不多说了。下面谈谈lua：</p>
-
-<h4>关于内存泄漏.</h4>
-
-<p>lua的内存泄漏主要是由于复杂数据结构比如table,引用了对象但是在逻辑执行完的时候并没有解引用引起的。相对于静态语言很多优秀的调优工具如vs上的vld等，带自动垃圾回收的语言可以通过对象快照来分辨内存使用情况。这就需要我们找到一个逻辑执行完毕的开始与结束的位置，做两次快照，以鉴别是否产生了内存泄漏。 说直白一点，比如游戏的时候，进入场景，打一些怪物，开启一些功能，再完整退出。 这就是一个整个游戏的开始于结束点。快照并做一些对比。</p>
-
-<p>lua快照工具：<a href="https://github.com/cloudwu/lua-snapshot">snapshot</a></p>
-
-<h4>关于函数效率.</h4>
-
-<p>这个就不多说了，比较简单，可以自己写一个profiler，或者使用这个模块<a href="https://github.com/LiuGuiRong/lua_profiler_4_pub">lua profiler</a></p>
 ]]></content>
   </entry>
   
