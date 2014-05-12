@@ -4,7 +4,7 @@
   <title><![CDATA[Category: go-sql-driver | OxRusher's Blog With Octopress]]></title>
   <link href="http://LiuGuiRong.github.io/blog/categories/go-sql-driver/atom.xml" rel="self"/>
   <link href="http://LiuGuiRong.github.io/"/>
-  <updated>2014-05-12T12:42:34+00:00</updated>
+  <updated>2014-05-12T12:46:04+00:00</updated>
   <id>http://LiuGuiRong.github.io/</id>
   <author>
     <name><![CDATA[OX RuHSER]]></name>
@@ -51,7 +51,7 @@ Bundle &lsquo;cespare/vim-golang&rsquo;</p>
 
 <p>接受用户以 table_name1,table_name2,table_name3&hellip; 的形式输入，这里使用了golang的闭包特性</p>
 
-<p>&mdash;&ndash; go</p>
+<hr />
 
 <p>func wait_() (names [] string) {</p>
 
@@ -110,7 +110,7 @@ return
 
 <h3>从mysql导出指定table的数据</h3>
 
-<p>在访问连接mysql的时候，由于只知道得到数据的表名，而不清楚里面具体的数据和对应的类型，就需要我们对数据类型做统一处理，但是现有的go-sql-driver并不支持对数据类型的获取(比较中肯的说，作为一个包的使用者，go-sql-dirver提供的接口确实不够友好), google后，发现很多老外都遇到相同的问题，在stackoverflow上提出的问题基本都没有较好的解决. 后来去<a href="http://godoc.org/github.com/arnehormann/sqlinternals/mysqlinternals">link</a>，找到了合适的方式。</p>
+<p>在访问连接mysql的时候，由于只知道得到数据的表名，而不清楚里面具体的数据和对应的类型，就需要我们对数据类型做统一处理，但是现有的go-sql-driver并不支持对数据类型的获取(比较中肯的说，go-sql-dirver提供的接口确实不够友好), google后，发现很多老外都遇到相同的问题，在stackoverflow上提出的问题基本都没有较好的解决. 后来去<a href="http://godoc.org/github.com/arnehormann/sqlinternals/mysqlinternals">link</a>，找到了合适的方式。</p>
 
 <h3>将数据写入到mongo中</h3>
 
