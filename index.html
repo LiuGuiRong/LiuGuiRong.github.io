@@ -140,11 +140,9 @@ Bundle &lsquo;cespare/vim-golang&rsquo;</p>
 
 <p>接受用户以 table_name1,table_name2,table_name3&hellip; 的形式输入，这里使用了golang的闭包特性</p>
 
-<hr />
-
 <p>func wait_() (names [] string) {</p>
 
-<pre><code>// closure pre-declare
+<pre><code>//closure pre-declare
 var waitting_input = func() {}
 var interact = func() {}
 waitting_input = func() () {
@@ -195,15 +193,13 @@ return
 
 <p>}</p>
 
-<hr />
-
 <h3>从mysql导出指定table的数据</h3>
 
 <p>在访问连接mysql的时候，由于只知道得到数据的表名，而不清楚里面具体的数据和对应的类型，就需要我们对数据类型做统一处理，但是现有的go-sql-driver并不支持对数据类型的获取(比较中肯的说，go-sql-dirver提供的接口确实不够友好), google后，发现很多老外都遇到相同的问题，在stackoverflow上提出的问题基本都没有较好的解决. 后来去<a href="http://godoc.org/github.com/arnehormann/sqlinternals/mysqlinternals">link</a>，找到了合适的方式。</p>
 
 <h3>将数据写入到mongo中</h3>
 
-<p>基本没什么说的，直接看代码吧</p>
+<p>基本没什么说的，直接看代码吧 <a href="https://github.com/LiuGuiRong/mygo">link</a></p>
 
 <h3>golang真正的并发编程特性还没有接触，后续会继续尝试。</h3>
 </div>
